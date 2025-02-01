@@ -1,0 +1,12 @@
+{
+  "myWorks": [
+    {
+      "title": "Seven Design Studio Website",
+      "slug": "seven-design-studio-website",
+      "description": "Website for Seven design studio",
+      "image": "Portfolio.webp",
+      "techStack": ["React js", "Tailwind CSS", "Framer motion"],
+      "liveUrl": "https://www.7-design.net"
+    }
+  ]
+}
