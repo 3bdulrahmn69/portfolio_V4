@@ -6,12 +6,20 @@ export default {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
-    darkMode: 'class',
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        'background-light': '#ededed',
+        'secondary-background-light': '#f9f9f9',
+        'foreground-light': '#171717',
+        'background-dark': '#0a0a0a',
+        'secondary-background-dark': '#212121',
+        'foreground-dark': '#ededed',
+        'primary-light': '#77B254',
+        'primary-dark': '#8EB486',
+        'secondary-light': '#f9f871',
+        'secondary-dark': '#f9f871',
       },
     },
   },

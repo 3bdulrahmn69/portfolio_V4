@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
+import { Raleway } from 'next/font/google';
 import './ui/globals.css';
+
+const raleway = Raleway({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased dark`}>{children}</body>
+      <body
+        className={`${raleway.className} bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark transition-colors duration-300 antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

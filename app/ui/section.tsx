@@ -1,4 +1,7 @@
 import { cn } from '../lib/utils';
+import { Pacifico } from 'next/font/google';
+
+const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
 
 interface SectionProps {
   id: string;
@@ -12,6 +15,11 @@ interface TitleProps {
 }
 
 interface DescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface LatinSpanProps {
   children: React.ReactNode;
   className?: string;
 }
@@ -30,21 +38,21 @@ export const Section = ({ id, className, children }: SectionProps) => {
 
 export const Title = ({ children, className }: TitleProps) => {
   return (
-    <h2 className={cn(`text-site md:text-site-md text-center`, className)}>
+    <h2
+      className={cn(
+        `${pacifico.className} text-lg md:text-xl text-center bg-secondary-background-light dark:bg-secondary-background-dark w-fit mx-auto p-2 rounded-lg`,
+        className
+      )}
+    >
       {children}
     </h2>
   );
 };
 
 export const Description = ({ children, className }: DescriptionProps) => {
-  return (
-    <p
-      className={cn(
-        `text-center text-[17px] md:text-[20px] text-light-text dark:text-primary-text lg:max-w-2xl px-6 text md:px-20 lg:px-0 max-w-2xl mx-auto`,
-        className
-      )}
-    >
-      {children}
-    </p>
-  );
+  return <p className={cn(`text-center mt-4`, className)}>{children}</p>;
+};
+
+export const LatinSpan = ({ children, className }: LatinSpanProps) => {
+  return <em className={cn(`${pacifico.className}`, className)}>{children}</em>;
 };

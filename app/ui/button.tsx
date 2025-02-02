@@ -16,7 +16,7 @@ const Button = ({
 }: ButtonProps) => {
   const variantStyles = {
     primary:
-      "relative text-white px-4 py-2 bg-blue-900 overflow-hidden cursor-pointer before:content-[''] before:absolute before:top-[-50%] before:bottom-[-50%] before:w-5 before:bg-white/20 before:z-[-1] before:translate-x-[-525%] before:rotate-[35deg] hover:before:translate-x-[200%] hover:before:transition-transform hover:before:duration-500",
+      'bg-primary-light dark:bg-primary-dark relative z-[1] px-3 py-2 overflow-hidden after:absolute after:-top-1/2 after:-bottom-1/2 after:left-0 after:w-5 after:content-[""] after:z-[-1] after:bg-[#ffffff33] shine',
     secondary: '',
     tertiary:
       "relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[2px] before:bg-[#3cefff] before:origin-bottom-right before:scale-x-0 before:transition-transform before:duration-500 hover:before:origin-bottom-left hover:before:scale-x-100",
