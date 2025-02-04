@@ -50,7 +50,7 @@ export const Title = ({ children, className }: TitleProps) => {
 };
 
 export const Description = ({ children, className }: DescriptionProps) => {
-  return <p className={cn(`text-center mt-4`, className)}>{children}</p>;
+  return <p className={cn("text-center my-4 max-w-[45ch] mx-auto", className)}>{children}</p>;
 };
 
 export const LatinSpan = ({ children, className }: LatinSpanProps) => {

@@ -13,7 +13,7 @@ const HeroText = () => {
         <LatinSpan>front-end developer</LatinSpan>. I&apos;m passionate about
         learning new technologies and building new things.
       </p>
-      <Button href="/contact" className="mt-4 px-8">
+      <Button href="#contact" className="mt-4 px-8">
         Hire Me
       </Button>
       <SocialLinks />

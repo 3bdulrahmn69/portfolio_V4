@@ -21,6 +21,20 @@ export default {
         'secondary-light': '#f9f871',
         'secondary-dark': '#f9f871',
       },
+      animation: {
+        'fade-in': 'fade-in 0.5s linear',
+        'slide-up': 'slide-up 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      keyframes: {
+        'fade-in': {
+          from: { opacity: '0', transform: 'translateX(-10px)' },
+          to: { opacity: '1', transform: 'translateX(0)' },
+        },
+        'slide-up': {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
   },
   plugins: [],

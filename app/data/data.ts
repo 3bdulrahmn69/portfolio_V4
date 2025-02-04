@@ -1,0 +1,145 @@
+import { Project } from '@/app/lib/definitions';
+
+import Small from '../../public/projects/Small.webp';
+import Bondi from '../../public/projects/Bondi.webp';
+import EStore from '../../public/projects/EStore.webp';
+import LoveLoom from '../../public/projects/LoveLoom.webp';
+import Youtube from '../../public/projects/Youtube.webp';
+import MercyBridge from '../../public/projects/MercyBridge.webp';
+import WowYouConvertIt from '../../public/projects/WowYouConvertIt.webp';
+import MyWatchedMovies from '../../public/projects/MyWatchedMovies.webp';
+import ReactQuizApp from '../../public/projects/ReactQuizApp.webp';
+import WorldWise from '../../public/projects/WorldWise.webp';
+import EchoTune from '../../public/projects/EchoTune.webp';
+import Planify from '../../public/projects/Planify.webp';
+
+export const projects: Project[] = [
+  {
+    title: 'Planify',
+    slug: 'planify',
+    description: 'Your personal planner to organize your day',
+    image: Planify,
+    techStack: [
+      'React js',
+      'Tailwind CSS',
+      'React DnD',
+      'Konva.js',
+      'local storage',
+    ],
+    githubUrl: 'https://github.com/3bdulrahmn69/planify',
+    liveUrl: 'https://3bdulrahmn69-planify.netlify.app',
+    underDevelopment: true,
+  },
+  {
+    title: 'EchoTune',
+    slug: 'echo-tune',
+    description: 'Web Application to discover new music from Spotify API',
+    image: EchoTune,
+    techStack: ['React js', 'Tailwind CSS', 'Rapid API (Spotify API)', 'Axios'],
+    githubUrl: 'https://github.com/3bdulrahmn69/echo_tune',
+    liveUrl: 'https://3bdulrahmn69-echotune.netlify.app',
+  },
+  {
+    title: 'WorldWise',
+    slug: 'world-wise',
+    description: 'Web Application to track your travel around the world',
+    image: WorldWise,
+    techStack: ['React js', 'CSS', 'Leaflet', 'Geolocation'],
+    githubUrl: 'https://github.com/3bdulrahmn69/worldWise',
+    liveUrl: 'https://3bdulrahmn69-worldwise.netlify.app',
+  },
+  {
+    title: 'React Quiz App',
+    slug: 'react-quiz-app',
+    description: 'Web Application designed to test users knowledge of React',
+    image: ReactQuizApp,
+    techStack: ['React js', 'CSS', 'JSON-SERVER'],
+    githubUrl: 'https://github.com/3bdulrahmn69/react_quiz',
+    liveUrl: 'https://3bdulrahmn69-reactquiz.netlify.app',
+  },
+  {
+    title: 'My Watched Movies',
+    slug: 'my-watched-movies',
+    description: 'Website to keep track of the movies you watched',
+    image: MyWatchedMovies,
+    techStack: ['React js', 'Tailwind CSS', 'daisyui', 'OMDb API', 'Axios'],
+    githubUrl: 'https://github.com/3bdulrahmn69/my_watched_movies',
+    liveUrl: 'https://mywatchedmovies.netlify.app',
+  },
+  {
+    title: 'Wow You Convert It',
+    slug: 'wow-you-convert-it',
+    description: 'See what your salary is worth in other wow currencies',
+    image: WowYouConvertIt,
+    techStack: ['React js', 'Tailwind CSS', 'Framer motion'],
+    githubUrl: 'https://github.com/3bdulrahmn69/wow_you_convert_it',
+    liveUrl: 'https://wowyouconvertit.netlify.app',
+  },
+  {
+    title: 'MercyBridge',
+    slug: 'mercy-bridge',
+    description:
+      'Website to make donation more easier by showcasing the charities',
+    image: MercyBridge,
+    techStack: ['React js', 'Tailwind CSS', 'I18next ', 'JSON-SERVER', 'Axios'],
+    githubUrl: 'https://github.com/3bdulrahmn69/mercyBridge',
+  },
+  {
+    title: 'Youtube Clone',
+    slug: 'youtube-clone',
+    description: 'Youtube Clone with youtube api from Rapid API',
+    image: Youtube,
+    techStack: ['React js', 'Axios', 'Material UI', 'Rapid API'],
+    githubUrl: 'https://github.com/3bdulrahmn69/youtube_clone_v2',
+    liveUrl: 'https://abdelrahman69-youtube.netlify.app/',
+  },
+  {
+    title: 'LoveLoom',
+    slug: 'love-loom',
+    description: 'A Website to enhance love stories - Memories and more',
+    image: LoveLoom,
+    techStack: ['HTML', 'Tailwind CSS', 'JavaScript', 'GSAP'],
+    githubUrl: 'https://github.com/3bdulrahmn69/LoveLoom',
+    liveUrl: 'https://loveloom.netlify.app/',
+  },
+  {
+    title: 'Estore',
+    slug: 'e-store',
+    description: 'Website for selling hardware products',
+    image: EStore,
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/3bdulrahmn69/Estore',
+  },
+  {
+    title: 'Bondi',
+    slug: 'bondi',
+    description: 'Bootstrap template to practice with',
+    image: Bondi,
+    techStack: ['HTML', 'CSS', 'Bootstrap'],
+    githubUrl: 'https://github.com/3bdulrahmn69/Bondi',
+    liveUrl: 'https://3bdulrahmn69.github.io/Bondi',
+  },
+  {
+    title: 'Javascript projects',
+    slug: 'javascript-projects',
+    description: 'Collection of javascript beginner projects',
+    image: Small,
+    techStack: ['HTML', 'JavaScript'],
+    githubUrl: 'https://github.com/3bdulrahmn69/JavaScript_Small_Pojects',
+    liveUrl: 'https://3bdulrahmn69.github.io/JavaScript_Small_Pojects',
+  },
+];
+
+export const works: Project[] = [
+  {
+    title: 'Seven Design Studio',
+    slug: 'seven-design-studio',
+    description:
+      'A portfolio website for Seven Design Studio to showcase their work and services',
+    image:
+      'https://raw.githubusercontent.com/drme990/7DStudio---Updated-Jan---2025/refs/heads/main/public/thumbnail.png',
+    techStack: ['React js', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://www.7-design.net',
+    paid: true,
+  },
+];

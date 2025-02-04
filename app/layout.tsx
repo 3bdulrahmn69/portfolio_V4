@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import './ui/globals.css';
+import Footer from './ui/footer';
+import GoTop from './ui/go-top';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
@@ -21,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.className} bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark transition-colors duration-300 antialiased`}
+        className={`${raleway.className} relative bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark transition-colors duration-300 antialiased`}
       >
         {children}
+        <GoTop />
+        <Footer />
       </body>
     </html>
   );
