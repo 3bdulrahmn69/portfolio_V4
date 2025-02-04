@@ -1,26 +1,23 @@
-import type { Metadata } from 'next';
+// interface ProjectParams {
+//   params: {
+//     projectId: string;
+//   };
+// }
 
-interface ProjectParams {
-  params: {
-    projectId: string;
-  };
-}
+// export const generateMetadata = ({ params }: ProjectParams): Metadata => {
+//   // Remove async
+//   const { projectId } = params; // Remove await
+//   return {
+//     title: `${projectId} Project`,
+//   };
+// };
 
-export const generateMetadata = async ({
-  params,
-}: ProjectParams): Promise<Metadata> => {
-  const { projectId } = await params;
-  return {
-    title: `${projectId} Project`,
-  };
-};
-
-export default async function ProjectDetails({ params }: ProjectParams) {
-  const { projectId } = await params;
+export default function ProjectDetails() {
+  // const { projectId } = params; // Remove await
 
   return (
     <div>
-      <h1>Project Num {projectId}</h1>
+      <h1>Project Num</h1>
     </div>
   );
 }
