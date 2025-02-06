@@ -14,11 +14,11 @@ export default function Projects() {
         projects
       </Description>
       <Container className="max-w-6xl mx-auto px-4 mt-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col justify-center items-center md:items-stretch md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {works.map((work) => (
             <ProjectCard key={work.slug} {...work} />
           ))}
-          {projects.slice(0, 4).map((project) => (
+          {projects.slice(0, 5).map((project) => (
             <ProjectCard key={project.slug} {...project} />
           ))}
         </div>

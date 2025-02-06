@@ -8,10 +8,10 @@ export default function Contact() {
     <Section id="contact">
       <Title>Get in touch</Title>
       <Description>
-        I&apos;m always open to new opportunities and collaborations. Feel free to
-        reach out to me for any inquiries.
+        I&apos;m always open to new opportunities and collaborations. Feel free
+        to reach out to me for any inquiries.
       </Description>
-      <Container className="flex flex-col gap-y-16 md:gap-y-0 md:gap-x-4 md:flex-row md:justify-between mt-8">
+      <Container className="flex flex-col gap-y-16 lg:gap-y-0 lg:gap-x-4 lg:flex-row items-center lg:justify-between mt-8">
         <ContactDetails />
         <ContactForm />
       </Container>

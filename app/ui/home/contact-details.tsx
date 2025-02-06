@@ -1,4 +1,9 @@
+import SocialLinks from './social-links';
+
 import { CiMail, CiPhone, CiLocationOn } from 'react-icons/ci';
+import { FaWhatsapp } from 'react-icons/fa';
+
+const message: string = 'Hello, I would like to get in touch with you!';
 
 const ContactDetails = () => {
   return (
@@ -11,7 +16,7 @@ const ContactDetails = () => {
         {/* Email */}
         <div className="flex items-center space-x-4">
           <div className="p-2 bg-primary-light dark:bg-primary-dark rounded-lg">
-            <CiMail className="w-6 h-6" />
+            <CiMail className="w-6 h-6 text-text-dark " />
           </div>
           <div>
             <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -19,7 +24,7 @@ const ContactDetails = () => {
             </p>
             <a
               href="mailto:abdelrahmanmoussa111@gmail.com"
-              className="text-lg font-semibold hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+              className="text-base md:text-lg break-all font-semibold hover:text-primary-light dark:hover:text-primary-dark transition-colors"
             >
               abdelrahmanmoussa111@gmail.com
             </a>
@@ -29,7 +34,7 @@ const ContactDetails = () => {
         {/* Phone */}
         <div className="flex items-center space-x-4">
           <div className="p-2 bg-primary-light dark:bg-primary-dark rounded-lg">
-            <CiPhone className="w-6 h-6" />
+            <CiPhone className="w-6 h-6 text-text-dark " />
           </div>
           <div>
             <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -47,7 +52,7 @@ const ContactDetails = () => {
         {/* Location */}
         <div className="flex items-center space-x-4">
           <div className="p-2 bg-primary-light dark:bg-primary-dark rounded-lg">
-            <CiLocationOn className="w-6 h-6" />
+            <CiLocationOn className="w-6 h-6 text-text-dark " />
           </div>
           <div>
             <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -66,6 +71,29 @@ const ContactDetails = () => {
             Available for new opportunities
           </span>
         </div>
+      </div>
+
+      <div className="mt-4 flex flex-col space-y-2 p-6 bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl">
+        <div className="flex items-center space-x-4">
+          <div className="p-2 bg-green-500 dark:text-green-400 rounded-lg">
+            <FaWhatsapp className="w-6 h-6 text-text-dark " />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+              Whatsapp
+            </p>
+            <a
+              href={`https://wa.me/+201018326780?text=${message}`}
+              className="text-lg font-semibold hover:text-primary-light dark:hover:text-primary-dark transition-colors"
+            >
+              +20 101 832 6780
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-4 flex flex-col space-y-2 p-6 bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl">
+        <SocialLinks />
       </div>
     </div>
   );

@@ -66,7 +66,7 @@ const ContactForm = () => {
         Contact Form
       </h3>
 
-      <div className="relative p-8 bg-secondary-background-light dark:bg-secondary-background-dark rounded-2xl">
+      <div className="relative p-8 bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl">
         <form
           onSubmit={handleSubmit}
           className="space-y-6"

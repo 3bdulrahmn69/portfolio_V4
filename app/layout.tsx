@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.className} relative bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark transition-colors duration-300 antialiased`}
+        className={`${raleway.className} relative bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased`}
       >
         {children}
         <GoTop />

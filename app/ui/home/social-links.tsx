@@ -16,7 +16,7 @@ const SocialLinks = () => {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-3xl text-primary-text-light dark:text-primary-text-dark hover:text-primary-light dark:hover:text-primary-dark"
+          className="text-3xl hover:text-primary-light dark:hover:text-primary-dark"
         >
           {link.icon}
         </a>

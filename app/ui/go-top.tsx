@@ -41,7 +41,7 @@ const GoTop = () => {
         isVisible
           ? 'opacity-100 visible translate-y-0'
           : 'opacity-0 invisible translate-y-4'
-      }`}
+      } ${scrollProgress > 95 ? 'md:bottom-28' : ''}`}
       onClick={goTop}
     >
       <div className="relative flex items-center justify-center">
