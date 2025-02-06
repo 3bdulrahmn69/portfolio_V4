@@ -28,7 +28,7 @@ export const Section = ({ id, className, children }: SectionProps) => {
   return (
     <section
       id={id}
-      className={cn('container mx-auto py-8 px-4 md:px-8', className)}
+      className={cn('py-8 px-4 md:px-8', className)}
       aria-label={id + ' section'}
     >
       {children}

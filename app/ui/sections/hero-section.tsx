@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import CustomCard from '../home/custom-card';
-import Header from '../home/header';
+import Header from '../header';
 import HeroText from '../home/hero-text';
 import { IoIosArrowDown } from 'react-icons/io';
 
@@ -25,7 +25,9 @@ export default function Hero() {
   return (
     <div className="relative">
       <div className="w-11/12 mx-auto mt-4 rounded-xl px-8 py-4 bg-secondary-background-light dark:bg-secondary-background-dark transition-colors duration-300">
-        <Header />
+        <div className="mb-8">
+          <Header />
+        </div>
         <div className="flex flex-col md:flex-row-reverse justify-center md:justify-between items-center">
           <CustomCard />
           <HeroText />

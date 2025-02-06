@@ -18,8 +18,6 @@ export default {
         'text-dark': '#ededed',
         'primary-light': '#C97C5D',
         'primary-dark': '#C89F9C',
-        'secondary-light': '#DB2777',
-        'secondary-dark': '#F472B6',
       },
       animation: {
         'fade-in': 'fade-in 0.5s linear',
