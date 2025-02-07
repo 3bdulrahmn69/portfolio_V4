@@ -11,3 +11,11 @@ export type Project = {
   underDevelopment?: boolean;
   paid?: boolean;
 };
+
+export type Certification = {
+  title: string;
+  issuer: string;
+  image: StaticImageData | string;
+  credentialUrl: string;
+  issueDate: string;
+};

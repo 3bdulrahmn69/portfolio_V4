@@ -7,6 +7,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'tertiary';
   type?: 'link' | 'anchor';
   className?: string;
+  ariaLabel?: string;
 }
 
 const Button = ({
@@ -15,6 +16,7 @@ const Button = ({
   variant = 'primary',
   type = 'link',
   className,
+  ariaLabel,
 }: ButtonProps) => {
   const variantStyles = {
     primary:
@@ -28,6 +30,9 @@ const Button = ({
     return (
       <a
         href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+        aria-label={ariaLabel}
         className={cn('inline-block', variantStyles[variant], className)}
       >
         {children}
@@ -38,6 +43,7 @@ const Button = ({
   return (
     <Link
       href={href}
+      aria-label={ariaLabel}
       className={cn('inline-block', variantStyles[variant], className)}
     >
       {children}

@@ -1,7 +1,7 @@
 'use client';
 
 import ToggleDark from './home/toggle-dark';
-import NavLinks from './nav-links';
+import Breadcrumb from './bread-crumb';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
     <header className="flex justify-between items-center p-4 max-w-7xl mx-auto bg-primary-light dark:bg-primary-dark rounded-lg">
       {pathname !== '/' ? (
         <div className="flex items-center space-x-2">
-          <NavLinks />
+          <Breadcrumb />
         </div>
       ) : (
         <p>Logo</p>

@@ -45,6 +45,7 @@ const AboutDetails = () => {
         <Button
           variant="tertiary"
           href="/about"
+          ariaLabel="Learn more about my journey"
           className="text-primary-light dark:text-primary-dark group inline-flex items-center justify-center gap-2 text-lg font-medium pt-4"
         >
           Learn more about my journey

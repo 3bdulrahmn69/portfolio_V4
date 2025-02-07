@@ -12,6 +12,7 @@ import {
   SiMongodb,
   SiExpress,
   SiNextdotjs,
+  SiGnubash,
 } from 'react-icons/si';
 import { DiMysql, DiJqueryLogo } from 'react-icons/di';
 import { TbBrandTailwind } from 'react-icons/tb';
@@ -79,18 +80,25 @@ const Skills = [
     name: 'MongoDB',
     icon: <SiMongodb />,
   },
+  {
+    name: 'Bash',
+    icon: <SiGnubash />,
+  },
 ];
 
-const TechStack = () => {
+interface TechStackProps {
+  children: React.ReactNode;
+  padding?: string;
+  size?: string;
+}
+
+const TechStack = ({ children, padding, size }: TechStackProps) => {
   return (
     <div className="flex flex-col gap-y-4 w-full max-w-md">
-      <h3>
-        <span className="text-primary-light dark:text-primary-dark">Tech</span>{' '}
-        Stack
-      </h3>
+      {children}
       <div className="grid grid-cols-5 lg:grid-cols-6 gap-4">
         {Skills.map((skill, index) => (
-          <TechCircle key={index} skill={skill} />
+          <TechCircle key={index} skill={skill} padding={padding} size={size} />
         ))}
       </div>
     </div>

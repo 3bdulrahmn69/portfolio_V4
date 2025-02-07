@@ -1,4 +1,4 @@
-import { Project } from '@/app/lib/definitions';
+import { Project, Certification } from '@/app/lib/definitions';
 
 import Small from '../../public/projects/Small.webp';
 import Bondi from '../../public/projects/Bondi.webp';
@@ -12,6 +12,10 @@ import ReactQuizApp from '../../public/projects/ReactQuizApp.webp';
 import WorldWise from '../../public/projects/WorldWise.webp';
 import EchoTune from '../../public/projects/EchoTune.webp';
 import Planify from '../../public/projects/Planify.webp';
+
+import softWare from '@/public/certifications/short-specializations.png';
+import aice from '@/public/certifications/aice.png';
+import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
   {
@@ -141,5 +145,89 @@ export const works: Project[] = [
     techStack: ['React js', 'Tailwind CSS', 'Framer Motion'],
     liveUrl: 'https://www.7-design.net',
     paid: true,
+  },
+];
+
+export const certifications: Certification[] = [
+  {
+    title: 'Software Engineering',
+    issuer: 'ALX Africa',
+    image: softWare,
+    credentialUrl: 'https://intranet.alxswe.com/certificates/SzYXcy2N6M',
+    issueDate: '2024-04-12',
+  },
+  {
+    title: 'AI Career Essentials (AiCE)',
+    issuer: 'ALX Africa',
+    image: aice,
+    credentialUrl: 'https://intranet.alxswe.com/certificates/J8RhZXpYBs',
+    issueDate: '2024-09-24',
+  },
+  {
+    title: 'Founder Academy',
+    issuer: 'ALX Ventures',
+    image: founder,
+    credentialUrl: 'https://intranet.alxswe.com/certificates/sy62TnCxN9',
+    issueDate: '2024-08-16',
+  },
+];
+
+export const education = [
+  {
+    title: 'Bachelor of Management Information Systems',
+    provider: 'El Obour Institute',
+    period: '2020 - 2024',
+    description:
+      'A 4-year of education focusing on information systems, database design and management, and software development.',
+  },
+  {
+    title: 'ALX Africa Software Engineering Program',
+    provider: 'ALX Africa',
+    period: '2023 - 2024',
+    description:
+      'Intensive 12-month course focusing on practical, real-world software development skills and methodologies.',
+  },
+];
+
+export const courses = [
+  {
+    title: 'The Ultimate React Course 2024: React, Next.js',
+    provider: 'Jonas Schmedtmann (Udemy)',
+    period: 'In Progress',
+    description:
+      'Deep dive into React.js, Next.js, and advanced React concepts.',
+    status: 'In Progress',
+  },
+  {
+    title: 'Summer Front-End Web Development Using React',
+    provider: 'ITI (Information Technology Institute)',
+    period: 'Summer 2024',
+    description:
+      'A 1-month course focusing on front-end web development using React.js and related technologies.',
+    status: 'Completed',
+  },
+  {
+    title: 'AI Career Essentials (AiCE)',
+    provider: 'ALX Africa',
+    period: '2024-09',
+    description:
+      'A 6-week course focusing on AI and machine learning concepts and AI tools, how to use them, how did they work, and how to works with them.',
+    status: 'Completed',
+  },
+  {
+    title: 'Founder Academy',
+    provider: 'ALX Ventures',
+    period: '2024-08',
+    description:
+      'A 3-month course focusing on entrepreneurship, how to start a business, how to grow it, and how to scale it.',
+    status: 'Completed',
+  },
+  {
+    title: 'The Complete JavaScript Course 2024: From Zero to Expert',
+    provider: 'Jonas Schmedtmann (Udemy)',
+    period: 'Completed 2024',
+    description:
+      'Comprehensive course covering JavaScript fundamentals, ES6+, and advanced concepts.',
+    status: 'Completed',
   },
 ];

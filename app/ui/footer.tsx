@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="px-8">
       <div className="flex flex-col md:flex-row items-center justify-between py-6">
-        <Button href="/#contact" className="mt-4 px-8">
+        <Button ariaLabel="contact" href="/#contact" className="mt-4 px-8">
           Contact
         </Button>
         <SocialLinks />

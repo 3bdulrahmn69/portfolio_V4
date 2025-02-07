@@ -2,7 +2,6 @@ import { FaFigma, FaTerminal } from 'react-icons/fa6';
 import {
   SiVim,
   SiPostman,
-  SiGnubash,
   SiNetlify,
   SiVercel,
   SiAxios,
@@ -29,10 +28,6 @@ const Tools = [
   {
     name: 'Vim',
     icon: <SiVim />,
-  },
-  {
-    name: 'Bash',
-    icon: <SiGnubash />,
   },
   {
     name: 'Github Copilot',
@@ -88,16 +83,19 @@ const Tools = [
   },
 ];
 
-const ToolsStack = () => {
+interface ToolsStackProps {
+  children: React.ReactNode;
+  padding?: string;
+  size?: string;
+}
+
+const ToolsStack = ({ children, padding, size }: ToolsStackProps) => {
   return (
     <div className="flex flex-col gap-y-4 w-full max-w-md">
-      <h3>
-        <span className="text-primary-light dark:text-primary-dark">Tools</span>{' '}
-        Stack
-      </h3>
-      <div className="grid grid-cols-5 lg:grid-cols-6 gap-4 mt-4">
+      {children}
+      <div className="grid grid-cols-5 lg:grid-cols-6 gap-4">
         {Tools.map((tool, index) => (
-          <TechCircle key={index} skill={tool} />
+          <TechCircle key={index} skill={tool} padding={padding} size={size} />
         ))}
       </div>
     </div>

@@ -1,9 +1,9 @@
-import Container from '@/app/ui/container';
-import { projects, works } from '@/app/data/data';
 import type { Metadata } from 'next';
+import Container from '@/app/ui/container';
+import Header from '@/app/ui/header';
 import ProjectCard from '@/app/ui/home/project-card';
 import { Description, Section, Title } from '@/app/ui/section';
-import Header from '@/app/ui/header';
+import { projects, works } from '@/app/data/data';
 
 export const metadata: Metadata = {
   title: 'Projects',

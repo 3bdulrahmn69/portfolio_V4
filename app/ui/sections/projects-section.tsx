@@ -27,7 +27,8 @@ export default function Projects() {
           <Button
             variant="tertiary"
             href="/projects"
-            className="group inline-flex items-center justify-center gap-2 px-8 py-3 text-lg font-medium"
+            ariaLabel="View More Projects"
+            className="group inline-flex items-center justify-center gap-2 px-2 py-3 text-lg"
           >
             View More Projects
             <FiArrowRight

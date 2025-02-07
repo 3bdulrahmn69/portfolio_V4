@@ -54,7 +54,12 @@ const ProjectCard = ({
       </div>
 
       <div className="flex items-center justify-center pb-4">
-        <Button href={`/projects/${slug}`} variant="tertiary" className="w-fit">
+        <Button
+          ariaLabel={`View more details about ${title} project`}
+          href={`/projects/${slug}`}
+          variant="tertiary"
+          className="w-fit"
+        >
           More Details
         </Button>
       </div>

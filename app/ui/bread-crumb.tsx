@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { IoIosArrowForward } from 'react-icons/io';
 
-const NavLinks = () => {
+const Breadcrumb = () => {
   const pathname = usePathname();
 
   // Split the pathname into segments
@@ -63,4 +63,4 @@ const NavLinks = () => {
   );
 };
 
-export default NavLinks;
+export default Breadcrumb;
