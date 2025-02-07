@@ -6,7 +6,6 @@ import TechStack from '@/app/ui/home/tech-stack';
 import { certifications, education, courses } from '@/app/data/data';
 import ToolsStack from '@/app/ui/home/tools-stack';
 import Certificate from '@/app/ui/about/certificate';
-import JourneyItem from '@/app/ui/about/journey-item';
 import Button from '@/app/ui/button';
 import { FiArrowRight } from 'react-icons/fi';
 import TimeLine from '@/app/ui/about/time-line';
