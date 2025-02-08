@@ -60,7 +60,7 @@ export default function ProjectsPage() {
               <div className="bg-gradient-to-r from-primary-light/10 to-secondary-light/10 dark:from-primary-dark/20 dark:to-secondary-dark/20 rounded-3xl p-8 md:p-12">
                 <div className="max-w-4xl mx-auto">
                   <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                    Welcome to my digital workshop! Here you'll find a curated
+                    Welcome to my digital workshop! Here you&apos;ll find a curated
                     collection of
                     <span className="text-primary-light dark:text-primary-dark font-medium">
                       {' '}
