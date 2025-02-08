@@ -2,21 +2,24 @@ import type { Metadata } from 'next';
 import Header from '@/app/ui/header';
 import Container from '@/app/ui/container';
 import { Description, Section, Title } from '@/app/ui/section';
-import TechStack from '@/app/ui/home/tech-stack';
 import { certifications, education, courses } from '@/app/data/data';
-import ToolsStack from '@/app/ui/home/tools-stack';
 import Certificate from '@/app/ui/about/certificate';
 import Button from '@/app/ui/button';
 import { FiArrowRight } from 'react-icons/fi';
 import TimeLine from '@/app/ui/about/time-line';
 import HobbyCard from '@/app/ui/about/hobby-card';
+import Image from 'next/image';
+import TechCard from '@/app/ui/about/tech-card';
+import ToolCard from '@/app/ui/about/tool-card';
+
+import { techStack, toolsStack } from '@/app/data/tech-tool';
 
 export const metadata: Metadata = {
   title: 'About',
   description:
     'Learn more about Abdulrahman Moussa, a frontend developer specializing in React.js and JavaScript. Explore skills, education, certifications, and professional experience.',
   keywords: [
-    'Abdulrahman Moussa',
+    'About Abdulrahman Moussa',
     'frontend developer',
     'React developer',
     'Next.js developer',
@@ -81,7 +84,139 @@ export default function AboutPage() {
                 Me
               </span>
             </Title>
-            <Description>let&apos;s get to know each other!</Description>
+            <Description>Let&apos;s get to know each other! 👋</Description>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+              {/* Profile Column */}
+              <div className="space-y-6 lg:col-span-1">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-primary-light dark:bg-primary-dark rounded-2xl transform rotate-3 transition-transform duration-300 group-hover:rotate-1"></div>
+                  <Image
+                    width={300}
+                    height={300}
+                    src="/my.png"
+                    alt="Abdulrahman Moussa"
+                    className="relative rounded-2xl border-4 border-secondary-background-light dark:border-secondary-background-dark w-full h-auto"
+                  />
+                </div>
+
+                <div className="space-y-2 p-4 bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl">
+                  <div className="flex items-center gap-2">
+                    📍
+                    <span className="font-medium">Cairo, Egypt</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    🎓
+                    <span className="font-medium">ALX Africa Graduate</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    💼
+                    <span className="font-medium">Open for Opportunities</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bio Content */}
+              <div className="lg:col-span-2 space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold flex items-center gap-2">
+                    <span className="text-primary-light dark:text-primary-dark">
+                      ✦
+                    </span>
+                    Crafting Digital Experiences
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    I&apos;m Abdulrahman Moussa, a frontend developer
+                    specializing in building immersive user interfaces. My
+                    journey began with ALX Africa&apos;s intensive Software
+                    Engineering program, where I mastered the art of
+                    transforming complex problems into elegant solutions.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="p-4 bg-blue-50 dark:bg-blue-900 rounded-xl">
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      🛠️ Core Skills
+                    </h4>
+                    <ul className="space-y-1">
+                      <li>• React & Next.js Architecture</li>
+                      <li>• Performance Optimization</li>
+                      <li>• Responsive UI Design</li>
+                      <li>• Cross-Browser Development</li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-green-50 dark:bg-green-900 rounded-xl">
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      🎯 Current Focus
+                    </h4>
+                    <ul className="space-y-1">
+                      <li>• Advanced React Patterns</li>
+                      <li>• TypeScript Mastery</li>
+                      <li>• UI/UX Principles</li>
+                      <li>• Accessibility Standards</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold flex items-center gap-2">
+                    <span className="text-primary-light dark:text-primary-dark">
+                      ✦
+                    </span>
+                    Engineering Philosophy
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    I approach development with three core principles:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 rounded-xl">
+                      <div className="text-2xl mb-2">💡</div>
+                      <h4 className="font-semibold">Clarity First</h4>
+                      <p className="text-sm mt-1">
+                        Readable, maintainable code structure
+                      </p>
+                    </div>
+                    <div className="text-center p-4 rounded-xl">
+                      <div className="text-2xl mb-2">🎨</div>
+                      <h4 className="font-semibold">Pixel Precision</h4>
+                      <p className="text-sm mt-1">
+                        UI consistency across devices
+                      </p>
+                    </div>
+                    <div className="text-center p-4 rounded-xl">
+                      <div className="text-2xl mb-2">⚡</div>
+                      <h4 className="font-semibold">Performance</h4>
+                      <p className="text-sm mt-1">
+                        Optimized loading & interactions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-purple-50 dark:bg-purple-900 rounded-xl">
+                  <h4 className="font-semibold mb-2 flex items-center gap-2">
+                    🚀 Career Goals
+                  </h4>
+                  <div className="text-gray-600 dark:text-gray-300">
+                    <p>Seeking frontend roles where I can contribute to:</p>
+                    <ul>
+                      <li>• Scalable web applications</li>
+                      <li>• Innovative SaaS products</li>
+                      <li>• Open source projects</li>
+                    </ul>
+                  </div>
+                  <Button
+                    href="/#contact"
+                    ariaLabel="Contact Me"
+                    className="mt-4"
+                  >
+                    Let&apos;s Collaborate
+                  </Button>
+                </div>
+              </div>
+            </div>
           </Section>
 
           <Section id="skills">
@@ -92,50 +227,59 @@ export default function AboutPage() {
               </span>
             </Title>
             <Description>
-              Here are some of the technologies I work with on a daily basis.
+              Technologies I wield with confidence and tools that power my
+              workflow
             </Description>
-            <article>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <div className="mt-4">
-                    <TechStack padding="p-3" size="text-3xl">
-                      <h3 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-primary-light dark:border-primary-dark inline-block w-fit">
-                        Core{' '}
-                        <span className="text-primary-light dark:text-primary-dark">
-                          Technologies
-                        </span>
-                      </h3>
-                    </TechStack>
-                  </div>
-                </div>
-                <div>
-                  <div className="mt-4">
-                    <ToolsStack padding="p-3" size="text-3xl">
-                      <h3 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-primary-light dark:border-primary-dark inline-block w-fit">
-                        Development{' '}
-                        <span className="text-primary-light dark:text-primary-dark">
-                          Tools
-                        </span>
-                      </h3>
-                    </ToolsStack>
-                  </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              <div className="skill-group">
+                <h3 className="section-subtitle">
+                  Core{' '}
+                  <span className="text-primary-light dark:text-primary-dark">
+                    Stack
+                  </span>
+                </h3>
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  {techStack.map((tech, index) => {
+                    const Icon = tech.icon;
+
+                    return (
+                      <TechCard key={index} name={tech.name} icon={<Icon />} />
+                    );
+                  })}
                 </div>
               </div>
-              <div className="text-center mt-12">
-                <Button
-                  variant="tertiary"
-                  href="/projects"
-                  ariaLabel="Discover Projects"
-                  className="group inline-flex items-center justify-center gap-2 px-2 py-3 text-lg"
-                >
-                  Discover Projects
-                  <FiArrowRight
-                    size={24}
-                    className="group-hover:translate-x-1 transition-transform duration-300"
-                  />
-                </Button>
+
+              <div className="skill-group">
+                <h3 className="section-subtitle">
+                  Development{' '}
+                  <span className="text-primary-light dark:text-primary-dark">
+                    Tools
+                  </span>
+                </h3>
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  {toolsStack.map((tool, index) => {
+                    const Icon = tool.icon;
+
+                    return (
+                      <ToolCard key={index} name={tool.name} icon={<Icon />} />
+                    );
+                  })}
+                </div>
               </div>
-            </article>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Button
+                variant="tertiary"
+                href="/projects"
+                ariaLabel="Explore My Work"
+                className="group inline-flex items-center gap-3 px-6 py-3 text-lg transition-all hover:gap-4"
+              >
+                Explore My Projects
+                <FiArrowRight className="transition-all group-hover:translate-x-1" />
+              </Button>
+            </div>
           </Section>
 
           <Section id="education">
@@ -170,7 +314,7 @@ export default function AboutPage() {
             </div>
           </Section>
 
-          <Section id="hobbies" className="mb-16">
+          <Section id="hobbies">
             <Title>
               My{' '}
               <span className="text-primary-light dark:text-primary-dark">
@@ -178,7 +322,8 @@ export default function AboutPage() {
               </span>
             </Title>
             <Description>
-              When I&apos;m not coding, I enjoy spending time on these activities
+              When I&apos;m not coding, I enjoy spending time on these
+              activities
             </Description>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">

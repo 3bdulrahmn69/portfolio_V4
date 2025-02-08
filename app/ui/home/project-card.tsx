@@ -1,6 +1,7 @@
 import { Project } from '@/app/lib/definitions';
 import Image from 'next/image';
 import Button from '../button';
+import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 const ProjectCard = ({
   title,
@@ -8,61 +9,104 @@ const ProjectCard = ({
   description,
   image,
   techStack,
+  githubUrl,
+  liveUrl,
   underDevelopment,
   paid,
 }: Project) => {
   return (
-    <div className="group flex flex-col justify-between relative w-full max-w-[500px] bg-secondary-background-light dark:bg-secondary-background-dark rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+    <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-lg bg-secondary-background-light dark:bg-secondary-background-dark shadow-lg transition-all duration-300">
       {/* Image Container */}
-      <div>
-        <div className="relative h-48 overflow-hidden">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-          />
+      <div className="relative aspect-video overflow-hidden">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent" />
+
+        {/* Status Badges */}
+        <div className="absolute left-2 top-2 flex gap-2">
           {underDevelopment && (
-            <div className="absolute top-2 right-2 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">
-              In Progress
-            </div>
+            <span className="rounded-full bg-yellow-400/90 px-3 py-1 text-xs font-medium text-gray-900">
+              🚧 In Progress
+            </span>
           )}
           {paid && (
-            <div className="absolute top-2 left-2 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">
-              $ Paid
-            </div>
+            <span className="rounded-full bg-green-400/90 px-3 py-1 text-xs font-medium text-gray-900">
+              💰 Paid Project
+            </span>
           )}
         </div>
 
-        <div className="p-6 flex flex-col items-center justify-start">
-          <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
-            {title}
-          </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+        {/* Project Title Overlay */}
+        <h3 className="absolute bottom-4 left-4 text-xl font-bold text-white">
+          {title}
+        </h3>
+      </div>
 
-          <div className="flex flex-wrap gap-2 mb-4">
-            {techStack.map((tech, index) => (
-              <span
-                key={index}
-                className="bg-primary-light dark:bg-primary-dark text-text-dark px-3 py-1 rounded-full text-sm"
+      {/* Content Container */}
+      <div className="flex flex-1 flex-col p-6">
+        {/* Description */}
+        <p className="mb-4 line-clamp-3 text-gray-600 dark:text-gray-300">
+          {description}
+        </p>
+
+        {/* Tech Stack */}
+        <div className="mt-auto flex flex-wrap gap-2">
+          {techStack.map((tech, index) => (
+            <span
+              key={index}
+              className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm text-gray-600 transition-colors dark:border-gray-700 dark:bg-gray-700/50 dark:text-gray-300"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Links Container */}
+        <div className="mt-6 flex items-center justify-between">
+          <div className="flex gap-3">
+            {githubUrl && (
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg p-2 hover:bg-background-light dark:hover:bg-background-dark transition-colors duration-300"
+                aria-label="GitHub repository"
               >
-                {tech}
-              </span>
-            ))}
+                <FiGithub className="h-5 w-5 text-primary-light dark:text-primary-dark" />
+              </a>
+            )}
+            {liveUrl && (
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg p-2 hover:bg-background-light dark:hover:bg-background-dark transition-colors duration-300"
+                aria-label="Live demo"
+              >
+                <FiExternalLink className="h-5 w-5 text-primary-light dark:text-primary-dark" />
+              </a>
+            )}
           </div>
+
+          <Button
+            ariaLabel={`View more details about ${title} project`}
+            href={`/projects/${slug}`}
+            variant="tertiary"
+            className="w-fit px-4 py-2"
+          >
+            Details
+          </Button>
         </div>
       </div>
 
-      <div className="flex items-center justify-center pb-4">
-        <Button
-          ariaLabel={`View more details about ${title} project`}
-          href={`/projects/${slug}`}
-          variant="tertiary"
-          className="w-fit"
-        >
-          More Details
-        </Button>
-      </div>
+      {/* Hover Border */}
+      <div className="absolute inset-0 pointer-events-none border-2 border-transparent transition-colors duration-300 group-hover:border-primary-light/30 dark:group-hover:border-primary-dark/30" />
     </div>
   );
 };
