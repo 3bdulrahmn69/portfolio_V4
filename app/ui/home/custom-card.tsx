@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FaFingerprint } from 'react-icons/fa';
+import BgImage from '../bg-image';
 
 export default function CustomCard() {
   return (
@@ -10,9 +11,11 @@ export default function CustomCard() {
           width={500}
           height={500}
           alt="Abdulrahman Moussa Picture"
+          className="relative z-[2]"
         />
+        <BgImage />
         <div
-          className="flex items-center justify-center absolute -top-[1px] -right-[1px] bg-secondary-background-light dark:bg-secondary-background-dark w-10 h-10"
+          className="flex items-center justify-center absolute -top-[1px] -right-[1px] bg-secondary-background-light dark:bg-secondary-background-dark w-10 h-10 z-10"
           style={{
             clipPath: 'polygon(100% 0, 100% 100%, 30% 100%, 0 70%, 0 0)',
           }}

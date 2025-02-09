@@ -38,7 +38,6 @@ const ToggleDark = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-md"
       aria-label="Toggle Dark Mode"
     >
       {isDarkMode ? (

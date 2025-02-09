@@ -13,6 +13,7 @@ import TechCard from '@/app/ui/about/tech-card';
 import ToolCard from '@/app/ui/about/tool-card';
 
 import { techStack, toolsStack } from '@/app/data/tech-tool';
+import BgImage from '@/app/ui/bg-image';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -96,8 +97,9 @@ export default function AboutPage() {
                     height={300}
                     src="/my.png"
                     alt="Abdulrahman Moussa"
-                    className="relative rounded-2xl border-4 border-secondary-background-light dark:border-secondary-background-dark w-full h-auto"
+                    className="relative rounded-2xl border-4 border-secondary-background-light dark:border-secondary-background-dark w-full h-auto z-[2]"
                   />
+                  <BgImage></BgImage>
                 </div>
 
                 <div className="space-y-2 p-4 bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl">
@@ -195,7 +197,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="p-4 bg-purple-50 dark:bg-purple-900 rounded-xl">
+                <div className="p-4 bg-orange-50 dark:bg-orange-900 rounded-xl">
                   <h4 className="font-semibold mb-2 flex items-center gap-2">
                     🚀 Career Goals
                   </h4>

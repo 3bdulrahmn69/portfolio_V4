@@ -60,8 +60,8 @@ export default function ProjectsPage() {
               <div className="bg-gradient-to-r from-primary-light/10 to-secondary-light/10 dark:from-primary-dark/20 dark:to-secondary-dark/20 rounded-3xl p-8 md:p-12">
                 <div className="max-w-4xl mx-auto">
                   <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                    Welcome to my digital workshop! Here you&apos;ll find a curated
-                    collection of
+                    Welcome to my digital workshop! Here you&apos;ll find a
+                    curated collection of
                     <span className="text-primary-light dark:text-primary-dark font-medium">
                       {' '}
                       professional projects{' '}
@@ -78,16 +78,16 @@ export default function ProjectsPage() {
                       href="/about"
                       variant="primary"
                       ariaLabel="Learn more about me"
-                      className="group inline-flex items-center gap-2 px-6 py-3 text-lg"
+                      className="group inline-flex items-center gap-2 px-6 py-3 text-lg w-fit"
                     >
-                      <span>My Story</span>
+                      My Story
                       <FiArrowRight className="transition-transform group-hover:translate-x-1" />
                     </Button>
                     <Button
                       href="#works"
                       variant="tertiary"
                       ariaLabel="View works"
-                      className="group inline-flex items-center gap-2 px-2 py-3 text-lg"
+                      className="group inline-flex items-center gap-2 px-2 py-3 text-lg w-fit"
                     >
                       <FiBriefcase className="w-5 h-5" />
                       <span>Jump to Works</span>
