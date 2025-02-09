@@ -17,6 +17,7 @@ const SocialLinks = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="text-3xl hover:text-primary-light dark:hover:text-primary-dark"
+          aria-label={link.label}
         >
           {link.icon}
         </a>

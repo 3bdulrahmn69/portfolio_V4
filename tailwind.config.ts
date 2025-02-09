@@ -17,7 +17,7 @@ export default {
         'secondary-background-dark': '#212121',
         'text-dark': '#ededed',
         'primary-light': '#2D336B',
-        'primary-dark': '#7886C7',
+        'primary-dark': '#97A1D3',
       },
       animation: {
         'fade-in': 'fade-in 0.5s linear',
