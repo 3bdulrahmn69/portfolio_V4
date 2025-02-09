@@ -43,7 +43,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     description:
       'Explore Abdulrahman Moussa’s projects, works, and development experience.',
-    images: ['/images/og-projects.jpg'],
+    images: [
+      'https://raw.githubusercontent.com/3bdulrahmn69/portfolio_V4/refs/heads/main/public/og-projects.jpg',
+    ],
   },
 };
 

@@ -51,7 +51,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     description:
       'Learn more about Abdulrahman Moussa, a frontend developer specializing in React.js and JavaScript. Explore skills, education, certifications, and professional experience.',
-    images: ['/images/og-about.jpg'],
+    images: [
+      'https://raw.githubusercontent.com/3bdulrahmn69/portfolio_V4/refs/heads/main/public/og-about.jpg',
+    ],
   },
 };
 

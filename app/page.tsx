@@ -52,7 +52,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     description:
       'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
-    images: ['/images/og-home.jpg'],
+    images: [
+      'https://raw.githubusercontent.com/3bdulrahmn69/portfolio_V4/refs/heads/main/public/og-home.jpg',
+    ],
   },
 };
 
