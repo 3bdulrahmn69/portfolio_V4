@@ -3,7 +3,7 @@ import Button from '../button';
 
 const AboutDetails = () => {
   return (
-    <div className="flex flex-col gap-y-4 w-full md:max-w-xs lg:max-w-2xl">
+    <div className="flex flex-col gap-y-4 w-full md:max-w-xs lg:max-w-2xl animate-FadeIn">
       <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
         Frontend Developer Crafting Digital Experiences
       </h2>

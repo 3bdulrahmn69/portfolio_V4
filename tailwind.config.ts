@@ -23,6 +23,10 @@ export default {
         'fade-in': 'fade-in 0.5s linear',
         'slide-up': 'slide-up 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         scroll: 'scroll 2s infinite',
+        FadeIn: 'cFadeIn 0.5s linear',
+        FadeInRev: 'cFadeInRev 0.5s linear',
+        slideUp: 'cSlideUp 0.5s linear',
+        slideDown: 'cSlideDown 0.5s linear',
       },
       keyframes: {
         'fade-in': {
@@ -36,6 +40,22 @@ export default {
         scroll: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(8px)' },
+        },
+        cFadeIn: {
+          '0%, 25%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        cFadeInRev: {
+          '0%, 25%': { transform: 'translateX(20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        cSlideUp: {
+          '0%, 25%': { transform: 'translateY(50px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        cSlideDown: {
+          '0%, 25%': { transform: 'translateY(-50px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
     },

@@ -12,7 +12,7 @@ const Header = ({ className }: { className?: string }) => {
   return (
     <header
       className={cn(
-        'flex justify-between items-center py-1 md:py-4 px-4 md:px-8 max-w-7xl mx-auto',
+        'flex justify-between items-center py-1 md:py-4 px-4 md:px-8 max-w-7xl mx-auto animate-slideDown',
         className
       )}
     >

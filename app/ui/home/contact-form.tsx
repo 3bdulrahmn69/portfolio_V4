@@ -61,7 +61,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md animate-FadeInRev">
       <h3 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-primary-light dark:border-primary-dark inline-block">
         Contact Form
       </h3>

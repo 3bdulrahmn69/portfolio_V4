@@ -4,7 +4,7 @@ import BgImage from '../bg-image';
 
 export default function CustomCard() {
   return (
-    <div className="bg-primary-light dark:bg-primary-dark rounded-lg transition-colors duration-300">
+    <div className="bg-primary-light dark:bg-primary-dark rounded-lg transition-colors duration-300 animate-FadeInRev">
       <figure className="relative">
         <Image
           src="/my.png"

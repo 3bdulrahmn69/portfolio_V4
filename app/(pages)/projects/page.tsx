@@ -57,7 +57,7 @@ export default function ProjectsPage() {
       </div>
       <main className="pt-8">
         <Container>
-          <Section id="projects-intro" className="mb-16">
+          <Section id="projects-intro" className="mb-16 animate-FadeInRev">
             <div className="text-center md:text-left">
               <div className="bg-gradient-to-r from-primary-light/10 to-secondary-light/10 dark:from-primary-dark/20 dark:to-secondary-dark/20 rounded-3xl p-8 md:p-12">
                 <div className="max-w-4xl mx-auto">
@@ -99,7 +99,7 @@ export default function ProjectsPage() {
               </div>
             </div>
           </Section>
-          <Section id="works" className="mb-8">
+          <Section id="works" className="mb-8 animate-slideUp">
             <Title>Works</Title>
             <Description>
               Here are some of the works I have done. Click on the cards to view
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
               ))}
             </div>
           </Section>
-          <Section id="projects" className="mb-8">
+          <Section id="projects" className="mb-8 animate-slideUp">
             <Title>Projects</Title>
             <Description>
               Here are some of the projects I have done. Click on the cards to

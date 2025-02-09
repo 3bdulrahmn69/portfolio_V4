@@ -7,7 +7,7 @@ const message: string = 'Hello, I would like to get in touch with you!';
 
 const ContactDetails = () => {
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md animate-FadeIn">
       <h3 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-primary-light dark:border-primary-dark inline-block">
         Contact Details
       </h3>

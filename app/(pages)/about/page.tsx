@@ -91,7 +91,7 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
               {/* Profile Column */}
-              <div className="space-y-6 lg:col-span-1">
+              <div className="space-y-6 lg:col-span-1 animate-FadeIn">
                 <div className="relative group">
                   <div className="absolute inset-0 bg-primary-light dark:bg-primary-dark rounded-2xl transform rotate-3 transition-transform duration-300 group-hover:rotate-1"></div>
                   <Image
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
               {/* Bio Content */}
               <div className="lg:col-span-2 space-y-6">
-                <div className="space-y-4">
+                <div className="space-y-4 animate-FadeInRev">
                   <h3 className="text-xl font-semibold flex items-center gap-2">
                     <span className="text-primary-light dark:text-primary-dark">
                       ✦
@@ -144,7 +144,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="p-4 bg-blue-50 dark:bg-blue-900 rounded-xl">
+                  <div className="p-4 bg-blue-50 dark:bg-blue-900 rounded-xl animate-slideUp">
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
                       🛠️ Core Skills
                     </h4>
@@ -156,7 +156,7 @@ export default function AboutPage() {
                     </ul>
                   </div>
 
-                  <div className="p-4 bg-green-50 dark:bg-green-900 rounded-xl">
+                  <div className="p-4 bg-green-50 dark:bg-green-900 rounded-xl animate-slideDown">
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
                       🎯 Current Focus
                     </h4>
@@ -169,7 +169,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4 animate-FadeInRev">
                   <h3 className="text-xl font-semibold flex items-center gap-2">
                     <span className="text-primary-light dark:text-primary-dark">
                       ✦
@@ -204,7 +204,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <div className="p-4 bg-orange-50 dark:bg-orange-900 rounded-xl">
+                <div className="p-4 bg-orange-50 dark:bg-orange-900 rounded-xl animate-FadeInRev">
                   <h4 className="font-semibold mb-2 flex items-center gap-2">
                     🚀 Career Goals
                   </h4>
@@ -228,7 +228,7 @@ export default function AboutPage() {
             </div>
           </Section>
 
-          <Section id="skills">
+          <Section id="skills" className="animate-slideUp">
             <Title>
               Technical{' '}
               <span className="text-primary-light dark:text-primary-dark">
@@ -291,7 +291,7 @@ export default function AboutPage() {
             </div>
           </Section>
 
-          <Section id="education">
+          <Section id="education" className="animate-slideUp">
             <Title>
               Education &{' '}
               <span className="text-primary-light dark:text-primary-dark">
@@ -323,7 +323,7 @@ export default function AboutPage() {
             </div>
           </Section>
 
-          <Section id="hobbies">
+          <Section id="hobbies" className="animate-FadeIn">
             <Title>
               My{' '}
               <span className="text-primary-light dark:text-primary-dark">

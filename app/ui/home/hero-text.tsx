@@ -4,7 +4,7 @@ import SocialLinks from './social-links';
 
 const HeroText = () => {
   return (
-    <div className="max-w-lg py-4">
+    <div className="max-w-lg py-4 animate-FadeIn">
       <h1 className="text-4xl font-bold max-w-[18ch]">
         Hello, I&apos;m Abdulrahman Moussa
       </h1>
