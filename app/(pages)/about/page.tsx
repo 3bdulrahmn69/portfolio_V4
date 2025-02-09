@@ -111,7 +111,9 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     🎓
-                    <span className="font-medium">ALX Africa Graduate</span>
+                    <span className="font-medium">
+                      Bachelor of Management Information Systems
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
                     💼
@@ -132,9 +134,10 @@ export default function AboutPage() {
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     I&apos;m Abdulrahman Moussa, a frontend developer
                     specializing in building immersive user interfaces. My
-                    journey began with ALX Africa&apos;s intensive Software
-                    Engineering program, where I mastered the art of
-                    transforming complex problems into elegant solutions.
+                    journey began with a passion for web technologies and a
+                    desire to create engaging digital experiences. I&apos;m
+                    enthusiastic about learning new tools and techniques to
+                    enhance my skills and deliver high-quality products.
                   </p>
                 </div>
 

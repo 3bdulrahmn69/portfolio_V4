@@ -6,6 +6,54 @@ import Contact from './ui/sections/contact-section';
 
 export const metadata: Metadata = {
   title: 'Abdulrahman Moussa - Home',
+  description:
+    'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
+  keywords: [
+    'Abdulrahman Moussa',
+    'frontend developer',
+    'React developer',
+    'Next.js developer',
+    'JavaScript expert',
+    'web development',
+    'portfolio',
+    'Cairo developer',
+    'software engineering',
+    'Abdulrahman Moussa projects',
+    'Abdulrahman Moussa works',
+    'Abdulrahman Moussa experience',
+    'Abdulrahman Moussa development',
+    'Abdulrahman Moussa portfolio',
+    'Abdulrahman Moussa Cairo',
+    'Abdulrahman Moussa software engineering',
+    'Abdulrahman Moussa frontend developer',
+    'Abdulrahman Moussa React developer',
+    'Abdulrahman Moussa Next.js developer',
+    'Abdulrahman Moussa JavaScript expert',
+    'Abdulrahman Moussa web development',
+  ],
+  openGraph: {
+    title: 'Abdulrahman Moussa - Home',
+    description:
+      'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
+    url: 'https://3bdulrahmn.tech',
+    siteName: 'Abdulrahman Moussa Portfolio',
+    images: [
+      {
+        url: '/images/og-home.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Abdulrahman Moussa - Home',
+    card: 'summary_large_image',
+    description:
+      'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
+    images: ['/images/og-home.jpg'],
+  },
 };
 
 export default function Home() {
