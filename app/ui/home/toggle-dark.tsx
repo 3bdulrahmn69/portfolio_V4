@@ -41,7 +41,7 @@ const ToggleDark = () => {
       aria-label="Toggle Dark Mode"
     >
       {isDarkMode ? (
-        <FaMoon className="text-gray-700" size={24} />
+        <FaMoon className="text-gray-500" size={24} />
       ) : (
         <FaSun className="text-yellow-500" size={24} />
       )}
