@@ -6,6 +6,7 @@ export type Project = {
   description: string;
   image: StaticImageData | string;
   techStack: string[];
+  type: 'personal' | 'professional';
   githubUrl?: string;
   liveUrl?: string;
   underDevelopment?: boolean;

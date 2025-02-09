@@ -95,6 +95,8 @@ export default function AboutPage() {
                   <Image
                     width={300}
                     height={300}
+                    quality={100}
+                    priority
                     src="/my.png"
                     alt="Abdulrahman Moussa"
                     className="relative rounded-2xl border-4 border-secondary-background-light dark:border-secondary-background-dark w-full h-auto z-[2]"

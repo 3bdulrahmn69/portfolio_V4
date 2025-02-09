@@ -22,6 +22,7 @@ const ProjectCard = ({
           src={image}
           alt={title}
           fill
+          sizes="100%"
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
 

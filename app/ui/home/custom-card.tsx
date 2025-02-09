@@ -12,6 +12,8 @@ export default function CustomCard() {
           height={500}
           alt="Abdulrahman Moussa Picture"
           className="relative z-[2]"
+          quality={100}
+          priority
         />
         <BgImage />
         <div

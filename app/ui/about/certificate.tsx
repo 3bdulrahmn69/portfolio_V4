@@ -16,7 +16,7 @@ const Certificate = ({
         alt={title}
         width={180}
         height={180}
-        className="rounded-lg"
+        className="rounded-lg w-auto h-auto"
       />
       <div>
         <h4 className="text-lg font-semibold">{title}</h4>
