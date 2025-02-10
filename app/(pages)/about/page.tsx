@@ -136,10 +136,14 @@ export default function AboutPage() {
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     I&apos;m Abdulrahman Moussa, a frontend developer
                     specializing in building immersive user interfaces. My
-                    journey began with a passion for web technologies and a
-                    desire to create engaging digital experiences. I&apos;m
-                    enthusiastic about learning new tools and techniques to
-                    enhance my skills and deliver high-quality products.
+                    journey began with a passion for web technologies, and I
+                    have honed my skills through ALX and independent learning. I
+                    thrive on creating engaging digital experiences that blend
+                    functionality with aesthetics. Constantly exploring new
+                    tools and techniques, I strive to enhance my expertise and
+                    deliver high-quality, user-centric products. My goal is to
+                    craft seamless and intuitive interfaces that elevate the
+                    user experience.
                   </p>
                 </div>
 

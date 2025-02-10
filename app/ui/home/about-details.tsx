@@ -11,7 +11,7 @@ const AboutDetails = () => {
       <div className="space-y-4 text-gray-600 dark:text-gray-300">
         <p>
           I&apos;m Abdulrahman Moussa, a dedicated frontend developer from
-          Cairo, Egypt. With 1+ year of experience and a Software Engineering
+          Cairo, Egypt. With one year of experience and a Software Engineering
           certification from ALX Africa, I specialize in building responsive web
           applications using modern technologies.
         </p>
