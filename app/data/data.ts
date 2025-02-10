@@ -12,12 +12,27 @@ import ReactQuizApp from '../../public/projects/ReactQuizApp.webp';
 import WorldWise from '../../public/projects/WorldWise.webp';
 import EchoTune from '../../public/projects/EchoTune.webp';
 import Planify from '../../public/projects/Planify.webp';
+import next_dashboard from '../../public/projects/next-dashboard.png';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
 import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
+  {
+    title: 'Next.js Dashboard',
+    slug: 'next-dashboard',
+    description: 'next.js dashboard template from official documentation',
+    image: next_dashboard,
+    techStack: ['Next.js'],
+    type: 'personal',
+    year: 2025,
+    githubUrl: 'https://github.com/3bdulrahmn69/nextjs-dashboard',
+    liveUrl: 'https://nextjs-dashboard-virid-five-68.vercel.app',
+    highlights: ['authentication', 'loading skeleton', 'responsive design'],
+    whatILearned: ['how to use Next.js'],
+    tags: ['next.js', 'dashboard', 'template'],
+  },
   {
     title: 'Planify',
     slug: 'planify',
