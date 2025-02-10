@@ -121,6 +121,19 @@ export default function AboutPage() {
                     💼
                     <span className="font-medium">Open for Opportunities</span>
                   </div>
+                  <div className="flex items-center gap-2">
+                    📄
+                    <span className="font-medium">
+                      <a
+                        href="https://flowcv.com/resume/emcfrihgf1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline"
+                      >
+                        View Resume
+                      </a>
+                    </span>
+                  </div>
                 </div>
               </div>
 

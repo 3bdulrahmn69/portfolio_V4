@@ -13,8 +13,15 @@ const HeroText = () => {
         <LatinSpan>front-end developer</LatinSpan>. I&apos;m passionate about
         learning new technologies and building new things.
       </p>
-      <Button ariaLabel="let's talk" href="#contact" className="mt-4 px-8">
+      <Button ariaLabel="let's talk" href="#contact" className="mt-4 px-8 mr-2">
         Let&apos;s talk
+      </Button>
+      <Button
+        ariaLabel="resume"
+        href="https://flowcv.com/resume/emcfrihgf1"
+        className="mt-4 px-8 bg-transparent dark:bg-transparent text-text-light dark:text-text-dark border-2 border-text-light dark:border-text-dark"
+      >
+        Resume
       </Button>
       <SocialLinks />
     </div>
