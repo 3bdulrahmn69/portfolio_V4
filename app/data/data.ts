@@ -1,4 +1,4 @@
-import { Project, Certification } from '@/app/lib/definitions';
+import { Project, Certification, ProjectCategory } from '@/app/lib/definitions';
 
 import Small from '../../public/projects/Small.webp';
 import Bondi from '../../public/projects/Bondi.webp';
@@ -31,7 +31,9 @@ export const projects: Project[] = [
     liveUrl: 'https://nextjs-dashboard-virid-five-68.vercel.app',
     highlights: ['authentication', 'loading skeleton', 'responsive design'],
     whatILearned: ['how to use Next.js'],
+    category: ProjectCategory.FULLSTACK,
     tags: ['next.js', 'dashboard', 'template'],
+    status: 'completed',
   },
   {
     title: 'Planify',
@@ -49,7 +51,6 @@ export const projects: Project[] = [
     year: 2025,
     githubUrl: 'https://github.com/3bdulrahmn69/planify',
     liveUrl: 'https://3bdulrahmn69-planify.netlify.app',
-    underDevelopment: true,
     highlights: [
       'drag and drop tasks from box to another',
       'reorder tasks in the same box',
@@ -71,6 +72,8 @@ export const projects: Project[] = [
       'planner',
       'task manager',
     ],
+    category: ProjectCategory.FRONTEND,
+    status: 'in-progress',
   },
   {
     title: 'EchoTune',
@@ -92,6 +95,8 @@ export const projects: Project[] = [
       'music',
       'recommendation',
     ],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'WorldWise',
@@ -113,6 +118,8 @@ export const projects: Project[] = [
       'what is Context API',
     ],
     tags: ['React', 'CSS', 'Leaflet', 'Geolocation', 'travel', 'countries'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'React Quiz App',
@@ -127,6 +134,8 @@ export const projects: Project[] = [
     highlights: ['multiple choice questions', 'score at the end of the quiz'],
     whatILearned: ['how to use JSON-SERVER', 'how to use React hooks'],
     tags: ['React', 'CSS', 'JSON-SERVER', 'quiz', 'questions'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'My Watched Movies',
@@ -145,6 +154,8 @@ export const projects: Project[] = [
       'how to use Axios',
     ],
     tags: ['React', 'Tailwind CSS', 'daisyui', 'OMDb API', 'movies'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'Wow You Convert It',
@@ -159,6 +170,8 @@ export const projects: Project[] = [
     highlights: ['convert your salary to other currencies'],
     whatILearned: ['how to use Framer motion'],
     tags: ['React', 'Tailwind CSS', 'Framer motion', 'currency', 'conversion'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'MercyBridge',
@@ -183,6 +196,8 @@ export const projects: Project[] = [
       'how to use Axios',
     ],
     tags: ['React', 'Tailwind CSS', 'I18next', 'JSON-SERVER', 'charities'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'Youtube Clone',
@@ -201,6 +216,8 @@ export const projects: Project[] = [
       'how to use Rapid API',
     ],
     tags: ['React', 'Axios', 'Material UI', 'Rapid API', 'youtube'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'LoveLoom',
@@ -215,6 +232,8 @@ export const projects: Project[] = [
     highlights: ['save your love story'],
     whatILearned: ['how to use GSAP'],
     tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'GSAP', 'love', 'stories'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'E-store',
@@ -233,6 +252,8 @@ export const projects: Project[] = [
     ],
     whatILearned: ['how to use local storage'],
     tags: ['HTML', 'CSS', 'JavaScript', 'store', 'products'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'Bondi',
@@ -247,6 +268,8 @@ export const projects: Project[] = [
     highlights: ['responsive design'],
     whatILearned: ['how to use Bootstrap'],
     tags: ['HTML', 'CSS', 'Bootstrap', 'template'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
   {
     title: 'Javascript projects',
@@ -261,6 +284,8 @@ export const projects: Project[] = [
     highlights: ['small projects to practice javascript'],
     whatILearned: ['how to use JavaScript'],
     tags: ['HTML', 'JavaScript', 'projects'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
 ];
 
@@ -289,6 +314,8 @@ export const works: Project[] = [
       'portfolio',
       'Seven Design Studio',
     ],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
   },
 ];
 

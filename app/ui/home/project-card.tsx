@@ -11,7 +11,7 @@ const ProjectCard = ({
   techStack,
   githubUrl,
   liveUrl,
-  underDevelopment,
+  status,
   paid,
 }: Project) => {
   return (
@@ -31,7 +31,7 @@ const ProjectCard = ({
 
         {/* Status Badges */}
         <div className="absolute left-2 top-2 flex gap-2">
-          {underDevelopment && (
+          {status === 'in-progress' && (
             <span className="rounded-full bg-yellow-400/90 px-3 py-1 text-xs font-medium text-gray-900">
               🚧 In Progress
             </span>

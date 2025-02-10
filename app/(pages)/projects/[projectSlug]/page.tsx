@@ -13,6 +13,8 @@ import {
   FiDollarSign,
   FiCheckCircle,
 } from 'react-icons/fi';
+import { BiSolidCategory } from 'react-icons/bi';
+import { AiFillAlert } from 'react-icons/ai';
 
 export async function generateMetadata({
   params,
@@ -79,9 +81,14 @@ export default async function ProjectDetails({
                   <h1 className="text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
                     {project.title}
                   </h1>
-                  {project.underDevelopment && (
+                  {project.status === 'in-progress' && (
                     <span className="bg-yellow-400/10 text-yellow-600 dark:text-yellow-400 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset ring-yellow-400/20">
                       Under Development
+                    </span>
+                  )}
+                  {project.status === 'stalled' && (
+                    <span className="bg-red-400/10 text-red-600 dark:text-red-400 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset ring-red-400/20">
+                      Stalled
                     </span>
                   )}
                 </div>
@@ -121,7 +128,7 @@ export default async function ProjectDetails({
             {project.githubUrl && (
               <Link
                 href={project.githubUrl}
-                className="inline-flex items-center justify-center px-6 py-3.5 bg-gray-900 hover:bg-gray-800 text-white rounded-xl shadow-sm hover:shadow-md transition-all font-medium gap-2 group"
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-gray-900 dark:bg-gray-200 hover:bg-gray-800 dark:hover:bg-gray-400 rounded-xl shadow-sm hover:shadow-md transition-all font-medium gap-2 group text-text-dark dark:text-text-light"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -132,7 +139,7 @@ export default async function ProjectDetails({
             {project.liveUrl && (
               <Link
                 href={project.liveUrl}
-                className="inline-flex items-center justify-center px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-sm hover:shadow-md transition-all font-medium gap-2 group"
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-primary-light dark:bg-primary-dark hover:bg-primary-light/80 dark:hover:bg-primary-dark/80 rounded-xl shadow-sm hover:shadow-md transition-all font-medium gap-2 group text-text-dark dark:text-text-light"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -212,6 +219,22 @@ export default async function ProjectDetails({
                 </div>
               </section>
 
+              <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Category
+                </h2>
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-primary-light/10 dark:bg-primary-dark/10 rounded-lg">
+                    <BiSolidCategory className="w-5 h-5 text-primary-light dark:text-primary-dark" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                      {project.category}
+                    </h3>
+                  </div>
+                </div>
+              </section>
+
               {project.paid && (
                 <section className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl shadow-sm border border-blue-200 dark:border-blue-800/50">
                   <div className="flex items-center gap-3">
@@ -224,6 +247,24 @@ export default async function ProjectDetails({
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-300">
                         Developed for client use in production environment
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              )}
+
+              {project.status === 'stalled' && (
+                <section className="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl shadow-sm border border-red-200 dark:border-red-800/50">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg">
+                      <AiFillAlert className="w-5 h-5 text-red-600 dark:text-red-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">
+                        Project Stalled
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                        Development has been paused or stopped for this project
                       </p>
                     </div>
                   </div>

@@ -1,5 +1,13 @@
 import { StaticImageData } from 'next/image';
 
+export enum ProjectCategory {
+  FRONTEND = 'Front-End Website',
+  BACKEND = 'Back-End Service',
+  FULLSTACK = 'Full-Stack Website',
+  PYTHON_APP = 'Python Desktop App',
+  SCRAPING = 'Web Scraping',
+}
+
 export type Project = {
   title: string;
   slug: string;
@@ -10,10 +18,11 @@ export type Project = {
   year: number;
   tags: string[];
   whatILearned: string[];
+  category: ProjectCategory;
+  status: 'completed' | 'in-progress' | 'stalled';
   highlights?: string[];
   githubUrl?: string;
   liveUrl?: string;
-  underDevelopment?: boolean;
   paid?: boolean;
 };
 
