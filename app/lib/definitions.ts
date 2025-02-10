@@ -7,6 +7,10 @@ export type Project = {
   image: StaticImageData | string;
   techStack: string[];
   type: 'personal' | 'professional';
+  year: number;
+  tags: string[];
+  whatILearned: string[];
+  highlights?: string[];
   githubUrl?: string;
   liveUrl?: string;
   underDevelopment?: boolean;

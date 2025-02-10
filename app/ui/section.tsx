@@ -1,7 +1,13 @@
 import { cn } from '../lib/utils';
-import { Pacifico } from 'next/font/google';
+import { Delius } from 'next/font/google';
+import { Comic_Neue } from 'next/font/google';
 
-const pacifico = Pacifico({ subsets: ['latin'], weight: ['400'] });
+const delius = Delius({ subsets: ['latin'], weight: ['400'] });
+const comic_neue = Comic_Neue({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+});
 
 interface SectionProps {
   id: string;
@@ -40,7 +46,7 @@ export const Title = ({ children, className }: TitleProps) => {
   return (
     <h2
       className={cn(
-        `${pacifico.className} text-lg md:text-xl text-center bg-secondary-background-light dark:bg-secondary-background-dark w-fit mx-auto p-2 rounded-lg`,
+        `${delius.className} text-lg md:text-xl text-center bg-secondary-background-light dark:bg-secondary-background-dark w-fit mx-auto p-2 rounded-lg`,
         className
       )}
     >
@@ -50,9 +56,22 @@ export const Title = ({ children, className }: TitleProps) => {
 };
 
 export const Description = ({ children, className }: DescriptionProps) => {
-  return <p className={cn("text-center my-4 max-w-[45ch] mx-auto", className)}>{children}</p>;
+  return (
+    <p className={cn('text-center my-4 max-w-[45ch] mx-auto', className)}>
+      {children}
+    </p>
+  );
 };
 
 export const LatinSpan = ({ children, className }: LatinSpanProps) => {
-  return <em className={cn(`${pacifico.className}`, className)}>{children}</em>;
+  return (
+    <span
+      className={cn(
+        `${comic_neue.className} italic font-bold text-primary-light dark:text-primary-dark`,
+        className
+      )}
+    >
+      {children}
+    </span>
+  );
 };

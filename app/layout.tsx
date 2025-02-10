@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Merriweather } from 'next/font/google';
 import './ui/globals.css';
 import Footer from './ui/footer';
 import GoTop from './ui/go-top';
@@ -7,14 +7,13 @@ import GoogleAnalytics from './ui/google-analytics';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const raleway = Raleway({ subsets: ['latin'] });
+const slabo_13px = Merriweather({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
   title: {
     template: 'Abdulrahman Moussa - %s',
-    default: 'Abdulrahman Moussa',
+    default: 'Abdulrahman Moussa portfolio',
   },
-  description: 'Welcome to my portfolio',
   metadataBase: new URL('https://www.3bdulrahmn.tech'),
 };
 
@@ -29,7 +28,7 @@ export default function RootLayout({
         <GoogleAnalytics />
       </head>
       <body
-        className={`${raleway.className} relative bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased`}
+        className={`${slabo_13px.className} relative bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased`}
       >
         {children}
         <GoTop />

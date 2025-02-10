@@ -7,7 +7,12 @@ import { Project } from '@/app/lib/definitions';
 import Container from '@/app/ui/container';
 import Header from '@/app/ui/header';
 
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import {
+  FiGithub,
+  FiExternalLink,
+  FiDollarSign,
+  FiCheckCircle,
+} from 'react-icons/fi';
 
 export async function generateMetadata({
   params,
@@ -38,6 +43,7 @@ export async function generateMetadata({
         },
       ],
     },
+    keywords: project.tags?.join(', '),
   };
 }
 
@@ -65,88 +71,166 @@ export default async function ProjectDetails({
         <Header />
       </div>
       <main>
-        <Container className="px-8">
-          <article className="max-w-4xl mx-auto">
-            <header className="mb-8">
-              <div className="flex items-center justify-between mb-4">
-                <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                  {project.title}
-                </h1>
-                {project.underDevelopment && (
-                  <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
-                    Under Development
+        <Container className="px-4 mx:px-8 py-12">
+          <header className="bg-gradient-to-r from-primary-light/20 to-primary-light/5 dark:from-primary-dark/20 dark:to-secondary-dark/5 p-8 rounded-2xl shadow-sm border border-secondary-background-light dark:border-secondary-background-dark mb-8">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div className="space-y-2">
+                <div className="flex items-center gap-4">
+                  <h1 className="text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+                    {project.title}
+                  </h1>
+                  {project.underDevelopment && (
+                    <span className="bg-yellow-400/10 text-yellow-600 dark:text-yellow-400 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset ring-yellow-400/20">
+                      Under Development
+                    </span>
+                  )}
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  {project.tags?.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-sm text-primary-600 dark:text-primary-400 font-medium"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                {project.year && (
+                  <span className="text-gray-500 dark:text-gray-400 font-medium">
+                    {project.year}
                   </span>
                 )}
               </div>
+            </div>
+          </header>
 
-              <div className="relative h-96 rounded-lg overflow-hidden mb-6">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                  priority
-                />
-              </div>
+          <div className="relative h-96 rounded-xl overflow-hidden my-8 shadow-lg">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover transition-transform duration-300 hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+              priority
+            />
+          </div>
 
-              <div className="flex gap-4 mb-4">
-                {project.githubUrl && (
-                  <Link
-                    href={project.githubUrl}
-                    className="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FiGithub className="mr-2" />
-                    Source Code
-                  </Link>
-                )}
-                {project.liveUrl && (
-                  <Link
-                    href={project.liveUrl}
-                    className="inline-flex items-center px-4 py-2 text-white bg-primary-light dark:bg-primary-dark hover:bg-primary-light/80 dark:hover:bg-primary-dark/80 rounded"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FiExternalLink className="mr-2" />
-                    Live Demo
-                  </Link>
-                )}
-              </div>
-            </header>
+          <div className="flex flex-col sm:flex-row gap-3 mb-8">
+            {project.githubUrl && (
+              <Link
+                href={project.githubUrl}
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-gray-900 hover:bg-gray-800 text-white rounded-xl shadow-sm hover:shadow-md transition-all font-medium gap-2 group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiGithub className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>View Repository</span>
+              </Link>
+            )}
+            {project.liveUrl && (
+              <Link
+                href={project.liveUrl}
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-sm hover:shadow-md transition-all font-medium gap-2 group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiExternalLink className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>Live Preview</span>
+              </Link>
+            )}
+          </div>
 
-            <section className="prose dark:prose-invert max-w-none mb-8">
-              <h2 className="text-2xl font-semibold mb-4">Project Overview</h2>
-              <p className="text-lg">{project.description}</p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4">Technical Stack</h2>
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </section>
-
-            {project.paid && (
-              <section className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg mb-8">
-                <h3 className="text-lg font-semibold mb-2">
-                  Commercial Project
-                </h3>
-                <p>
-                  This is a paid, production-grade project developed for a
-                  client.
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-8">
+              <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Project Overview
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {project.description}
                 </p>
               </section>
-            )}
-          </article>
+
+              {project.highlights && (
+                <section className="space-y-4">
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    Key Features
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {project.highlights.map((highlight) => (
+                      <div
+                        key={highlight}
+                        className="p-4 bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl shadow-sm border border-primary-light dark:border-primary-dark"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="mt-1 text-primary-600 dark:text-primary-400">
+                            <FiCheckCircle className="w-5 h-5 text-primary-light dark:text-primary-dark" />
+                          </div>
+                          <p>{highlight}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {project.whatILearned && (
+                <section className="space-y-4">
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    What I Learned
+                  </h2>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {project.whatILearned.map((lesson) => (
+                      <li
+                        key={lesson}
+                        className="text-lg text-gray-600 dark:text-gray-300"
+                      >
+                        {lesson}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+            </div>
+
+            <aside className="lg:col-span-1 space-y-8">
+              <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Technical Stack
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1.5 bg-secondary-background-light dark:bg-secondary-background-dark rounded-lg text-sm font-medium border border-secondary-background-light dark:border-secondary-background-dark"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </section>
+
+              {project.paid && (
+                <section className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl shadow-sm border border-blue-200 dark:border-blue-800/50">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                      <FiDollarSign className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">
+                        Commercial Project
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
+                        Developed for client use in production environment
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              )}
+            </aside>
+          </div>
         </Container>
       </main>
     </div>

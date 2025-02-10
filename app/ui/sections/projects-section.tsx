@@ -8,7 +8,7 @@ import { FiArrowRight } from 'react-icons/fi';
 export default function Projects() {
   return (
     <Section id="projects" className="pt-20 animate-slideUp">
-      <Title>Projects</Title>
+      <Title>Projects & Works</Title>
       <Description>
         Explore a curated selection of my professional work and personal
         projects
