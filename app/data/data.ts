@@ -13,12 +13,29 @@ import WorldWise from '../../public/projects/WorldWise.webp';
 import EchoTune from '../../public/projects/EchoTune.webp';
 import Planify from '../../public/projects/Planify.webp';
 import next_dashboard from '../../public/projects/next-dashboard.png';
+import edmunds_scraping from '../../public/projects/edmunds-scraping.png';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
 import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
+  {
+    title: 'Edmunds Scraping',
+    slug: 'edmunds-scraping',
+    description: 'Scraping the Edmunds website to get the car details',
+    image: edmunds_scraping,
+    techStack: ['Next.js', 'puppeteer'],
+    type: 'personal',
+    year: 2025,
+    githubUrl: 'https://github.com/3bdulrahmn69/edmunds-scraping',
+    liveUrl: 'https://edmunds-scraping.vercel.app',
+    highlights: ['scraping the website', 'get the car details'],
+    whatILearned: ['what is web scraping', 'how to use puppeteer'],
+    category: ProjectCategory.SCRAPING,
+    tags: ['next.js', 'puppeteer', 'scraping'],
+    status: 'completed',
+  },
   {
     title: 'Next.js Dashboard',
     slug: 'next-dashboard',
