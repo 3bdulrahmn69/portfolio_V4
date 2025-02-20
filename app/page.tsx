@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: 'Abdulrahman Moussa Portfolio',
     images: [
       {
-        url: '/images/og-home.jpg',
+        url: 'https://raw.githubusercontent.com/3bdulrahmn69/portfolio_V4/refs/heads/main/public/og-home.jpg',
         width: 1200,
         height: 630,
       },

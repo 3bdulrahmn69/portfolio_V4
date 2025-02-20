@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     'Learn more about Abdulrahman Moussa, a frontend developer specializing in React.js and JavaScript. Explore skills, education, certifications, and professional experience.',
   keywords: [
     'About Abdulrahman Moussa',
+    'Abdulrahman Moussa bio',
+    'who is Abdulrahman Moussa',
+    'Abdulrahman Moussa about',
     'frontend developer',
     'React developer',
     'Next.js developer',
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     siteName: 'Abdulrahman Moussa Portfolio',
     images: [
       {
-        url: '/images/og-about.jpg',
+        url: 'https://raw.githubusercontent.com/3bdulrahmn69/portfolio_V4/refs/heads/main/public/og-about.jpg',
         width: 1200,
         height: 630,
       },

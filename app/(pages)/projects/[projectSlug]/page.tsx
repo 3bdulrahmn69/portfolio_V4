@@ -34,7 +34,11 @@ export async function generateMetadata({
   return {
     title: `${project.title} | Project Details`,
     description: project.description,
+    keywords: project.tags?.join(', '),
     openGraph: {
+      title: `${project.title} | Project Details`,
+      description: project.description,
+      url: `https://3bdulrahmn.tech/projects/${project.slug}`,
       images: [
         {
           url:
@@ -44,7 +48,19 @@ export async function generateMetadata({
         },
       ],
     },
-    keywords: project.tags?.join(', '),
+    twitter: {
+      title: `${project.title} | Project Details`,
+      card: 'summary_large_image',
+      description: project.description,
+      images: [
+        {
+          url:
+            typeof project.image === 'string'
+              ? project.image
+              : project.image.src,
+        },
+      ],
+    },
   };
 }
 
