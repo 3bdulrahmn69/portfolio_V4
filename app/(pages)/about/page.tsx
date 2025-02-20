@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/app/ui/header';
 import Container from '@/app/ui/container';
 import { Description, Section, Title } from '@/app/ui/section';
 import { certifications, education, courses } from '@/app/data/data';
@@ -75,9 +74,6 @@ export default function AboutPage() {
 
   return (
     <div>
-      <div className="mt-8">
-        <Header />
-      </div>
       <main>
         <Container>
           <Section id="bio">
