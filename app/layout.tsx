@@ -26,6 +26,30 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleAnalytics />
+        <meta name="theme-color" content="#ededed" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                const updateThemeColor = () => {
+                  if(document.documentElement.classList.contains('dark')) {
+                    metaThemeColor.setAttribute('content', '#0a0a0a');
+                  } else {
+                    metaThemeColor.setAttribute('content', '#ededed');
+                  }
+                };
+                
+                // Run on initial load
+                updateThemeColor();
+                
+                // Observe class changes on <html>
+                const observer = new MutationObserver(updateThemeColor);
+                observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         className={`${slabo_13px.className} relative bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased`}
