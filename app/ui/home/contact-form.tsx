@@ -87,7 +87,7 @@ const ContactForm = () => {
                 value={userInput.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gray-50 dark:bg-background-light border border-gray-200 dark:border-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent transition-all"
+                className="w-full px-4 py-3 text-text-light bg-gray-50 dark:bg-background-light border border-gray-200 dark:border-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent transition-all"
                 placeholder="Enter your name"
                 aria-required="true"
               />
@@ -107,7 +107,7 @@ const ContactForm = () => {
                 value={userInput.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gray-50 dark:bg-background-light border border-gray-200 dark:border-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent transition-all"
+                className="w-full px-4 py-3 text-text-light bg-gray-50 dark:bg-background-light border border-gray-200 dark:border-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent transition-all"
                 placeholder="your.email@example.com"
                 aria-required="true"
               />
@@ -127,7 +127,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 bg-gray-50 dark:bg-background-light border border-gray-200 dark:border-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent transition-all resize-none"
+                className="w-full px-4 py-3 text-text-light bg-gray-50 dark:bg-background-light border border-gray-200 dark:border-gray-600 rounded-lg outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent transition-all resize-none"
                 placeholder="Enter your message.."
                 aria-required="true"
               />
