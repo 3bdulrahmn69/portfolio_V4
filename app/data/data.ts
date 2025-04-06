@@ -14,12 +14,34 @@ import EchoTune from '../../public/projects/EchoTune.webp';
 import Planify from '../../public/projects/Planify.webp';
 import next_dashboard from '../../public/projects/next-dashboard.png';
 import edmunds_scraping from '../../public/projects/edmunds-scraping.png';
+import games_center from '../../public/projects/gamesCenter.png';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
 import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
+  {
+    title: 'Games Center',
+    slug: 'games-center',
+    description:
+      'Collection of games done with vanilla JavaScript to be more familiar with DOM manipulation',
+    image: games_center,
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    type: 'personal',
+    year: 2025,
+    githubUrl: 'https://github.com/3bdulrahmn69/iti-games-tasks',
+    liveUrl: 'https://3bdulrahmn69.github.io/iti-games-tasks',
+    highlights: [
+      'Mouse & Keyboard control',
+      'Sound Effects',
+      'Easter egg with (duck, dog) words',
+    ],
+    whatILearned: ['more about DOM manipulation', 'getBoundingClientRect()'],
+    category: ProjectCategory.FRONTEND,
+    tags: ['HTML', 'CSS', 'JavaScript', 'Games'],
+    status: 'completed',
+  },
   {
     title: 'Edmunds Scraping',
     slug: 'edmunds-scraping',
