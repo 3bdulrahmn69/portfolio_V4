@@ -19,7 +19,7 @@ html {
     rgba(255, 255, 255, 0.3),
     transparent
   );
-  transition: left 0.3s ease-in-out;
+  transition: left 0.25s ease-in-out;
 }
 
 .shine:hover::before {
