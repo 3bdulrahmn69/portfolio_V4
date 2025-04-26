@@ -17,7 +17,7 @@ export type Project = {
   type: 'personal' | 'professional';
   year: number;
   tags: string[];
-  whatILearned: string[];
+  whatILearned?: string[];
   category: ProjectCategory;
   status: 'completed' | 'in-progress' | 'stalled';
   highlights?: string[];

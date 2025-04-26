@@ -97,8 +97,8 @@ export default function ProjectsPage() {
         <Section id="works" className="mb-8 animate-slideUp">
           <Title>Works</Title>
           <Description>
-            Here are some of the works I have done. Click on the cards to view
-            more details.
+            A collection of my professional projects, showcasing my skills and
+            experience in frontend development.
           </Description>
           <div className="flex flex-col justify-center items-center md:items-stretch md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {works.map((work) => (
@@ -109,8 +109,8 @@ export default function ProjectsPage() {
         <Section id="projects" className="mb-8 animate-slideUp">
           <Title>Projects</Title>
           <Description>
-            Here are some of the projects I have done. Click on the cards to
-            view more details.
+            Explore my personal projects, where I apply my skills and creativity
+            to build innovative solutions and experiment with new technologies.
           </Description>
           <div className="flex flex-col justify-center items-center md:items-stretch md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (

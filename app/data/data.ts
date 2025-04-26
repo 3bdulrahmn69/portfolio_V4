@@ -14,7 +14,7 @@ import EchoTune from '../../public/projects/EchoTune.webp';
 import Planify from '../../public/projects/Planify.webp';
 import next_dashboard from '../../public/projects/next-dashboard.png';
 import edmunds_scraping from '../../public/projects/edmunds-scraping.png';
-import games_center from '../../public/projects/gamesCenter.png';
+import iti from '../../public/projects/iti.webp';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
@@ -22,25 +22,23 @@ import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
   {
-    title: 'Games Center',
-    slug: 'games-center',
+    title: 'ITI Projects Collection',
+    slug: 'iti-projects-collection',
     description:
-      'Collection of games done with vanilla JavaScript to be more familiar with DOM manipulation',
-    image: games_center,
-    techStack: ['HTML', 'CSS', 'JavaScript'],
+      'Collection of projects done during the ITI Frontend Web Development track',
+    image: iti,
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     type: 'personal',
     year: 2025,
-    githubUrl: 'https://github.com/3bdulrahmn69/iti-games-tasks',
-    liveUrl: 'https://3bdulrahmn69.github.io/iti-games-tasks',
-    highlights: [
-      'Mouse & Keyboard control',
-      'Sound Effects',
-      'Easter egg with (duck, dog) words',
+    githubUrl: 'https://github.com/3bdulrahmn69/iti-projects-zag-branch-r3',
+    liveUrl: 'https://3bdulrahmn69.github.io/iti-projects-zag-branch-r3',
+    whatILearned: [
+      'Deep understanding of HTML, CSS, and JavaScript',
+      "How JavaScript works and it's engines",
     ],
-    whatILearned: ['more about DOM manipulation', 'getBoundingClientRect()'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'projects', 'iti'],
     category: ProjectCategory.FRONTEND,
-    tags: ['HTML', 'CSS', 'JavaScript', 'Games'],
-    status: 'completed',
+    status: 'in-progress',
   },
   {
     title: 'Edmunds Scraping',
@@ -396,6 +394,13 @@ export const education = [
     period: '2023 - 2024',
     description:
       'Intensive 12-month course focusing on practical, real-world software development skills and methodologies.',
+  },
+  {
+    title: 'Frontend Web Development and Cross-Platform Mobile Development',
+    provider: 'ITI (Information Technology Institute)',
+    period: 'March 2025 - July 2025',
+    description:
+      'Intensive 4-month course focusing on front-end web development and cross-platform mobile development',
   },
 ];
 
