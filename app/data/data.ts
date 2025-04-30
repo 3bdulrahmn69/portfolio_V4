@@ -14,7 +14,7 @@ import EchoTune from '../../public/projects/EchoTune.webp';
 import Planify from '../../public/projects/Planify.webp';
 import next_dashboard from '../../public/projects/next-dashboard.png';
 import edmunds_scraping from '../../public/projects/edmunds-scraping.png';
-import iti from '../../public/projects/iti.webp';
+import iti from '../../public/projects/iti.jpg';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
