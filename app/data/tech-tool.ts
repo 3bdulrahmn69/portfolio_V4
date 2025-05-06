@@ -7,6 +7,7 @@ import {
   FaPython,
   FaFigma,
   FaTerminal,
+  FaSass,
 } from 'react-icons/fa6';
 import {
   SiTypescript,
@@ -36,6 +37,7 @@ export const techStack = [
   { name: 'CSS', icon: FaCss3 },
   { name: 'JavaScript', icon: FaJs },
   { name: 'Bootstrap', icon: FaBootstrap },
+  { name: 'Sass', icon: FaSass },
   { name: 'Tailwind CSS', icon: TbBrandTailwind },
   { name: 'jQuery', icon: DiJqueryLogo },
   { name: 'TypeScript', icon: SiTypescript },
