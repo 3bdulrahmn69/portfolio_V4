@@ -36,6 +36,11 @@ const ProjectCard = ({
               🚧 In Progress
             </span>
           )}
+          {status === 'stalled' && (
+            <span className="rounded-full bg-red-400/90 px-3 py-1 text-xs font-medium text-gray-900">
+              🛑 Stalled
+            </span>
+          )}
           {paid && (
             <span className="rounded-full bg-green-400/90 px-3 py-1 text-xs font-medium text-gray-900">
               💰 Paid Project

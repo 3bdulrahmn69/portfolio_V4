@@ -27,7 +27,15 @@ export const projects: Project[] = [
     description:
       'Collection of projects done during the ITI Frontend Web Development track',
     image: iti,
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    techStack: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Bootstrap',
+      'React',
+      'Tailwind CSS',
+      'Sass',
+    ],
     type: 'personal',
     year: 2025,
     githubUrl: 'https://github.com/3bdulrahmn69/iti-projects-zag-branch-r3',
@@ -110,7 +118,7 @@ export const projects: Project[] = [
       'task manager',
     ],
     category: ProjectCategory.FRONTEND,
-    status: 'in-progress',
+    status: 'stalled',
   },
   {
     title: 'EchoTune',
