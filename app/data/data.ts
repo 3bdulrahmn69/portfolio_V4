@@ -394,21 +394,21 @@ export const education = [
     provider: 'El Obour Institute',
     period: '2020 - 2024',
     description:
-      'A 4-year of education focusing on information systems, database design and management, and software development.',
+      'Comprehensive 4-year program covering information systems, database design, software development, and IT management fundamentals.',
   },
   {
     title: 'ALX Africa Software Engineering Program',
     provider: 'ALX Africa',
     period: '2023 - 2024',
     description:
-      'Intensive 12-month course focusing on practical, real-world software development skills and methodologies.',
+      'Rigorous 12-month program focused on hands-on software engineering, problem-solving, algorithms, low-level programming, and real-world project collaboration.',
   },
   {
-    title: 'Frontend Web Development and Cross-Platform Mobile Development',
-    provider: 'ITI (Information Technology Institute)',
+    title: 'Frontend & Cross-Platform Development',
+    provider: 'Information Technology Institute (ITI)',
     period: 'March 2025 - July 2025',
     description:
-      'Intensive 4-month course focusing on front-end web development and cross-platform mobile development',
+      'Intensive 4-month training in JavaScript, modern frontend frameworks, cross-platform development, UI/UX design, and performance optimization through real-world projects.',
   },
 ];
 

@@ -146,16 +146,16 @@ export default function AboutPage() {
                     Crafting Digital Experiences
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    I&apos;m Abdulrahman Moussa, a frontend developer
-                    specializing in building immersive user interfaces. My
-                    journey began with a passion for web technologies, and I
-                    have honed my skills through ALX and independent learning. I
-                    thrive on creating engaging digital experiences that blend
-                    functionality with aesthetics. Constantly exploring new
-                    tools and techniques, I strive to enhance my expertise and
-                    deliver high-quality, user-centric products. My goal is to
-                    craft seamless and intuitive interfaces that elevate the
-                    user experience.
+                    I&apos;m Abdulrahman Moussa, a frontend developer focused on
+                    building immersive, user-first web interfaces. My skills
+                    were shaped through ALX, self-learning, and formal training
+                    at ITI in Front-End Cross Platform Development, where I
+                    worked on real-world projects using modern frameworks and
+                    best practices. I specialize in creating responsive,
+                    intuitive digital experiences that balance performance with
+                    visual appeal. Passionate about continuous growth, I&apos;m
+                    always exploring new tools to craft seamless and impactful
+                    user experiences.
                   </p>
                 </div>
 
