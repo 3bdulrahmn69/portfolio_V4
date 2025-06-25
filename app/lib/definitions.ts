@@ -12,7 +12,7 @@ export type Project = {
   title: string;
   slug: string;
   description: string;
-  image: StaticImageData | string;
+  image: StaticImageData | string | null;
   techStack: string[];
   type: 'personal' | 'professional';
   year: number;

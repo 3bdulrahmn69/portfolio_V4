@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     title: 'Abdulrahman Moussa - Projects',
     description:
       'Explore Abdulrahman Moussa’s projects, works, and development experience.',
-    url: 'https://3bdulrahmn.tech/projects',
     siteName: 'Abdulrahman Moussa Portfolio',
     images: [
       {

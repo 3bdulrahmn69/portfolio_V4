@@ -15,6 +15,7 @@ import Planify from '../../public/projects/Planify.webp';
 import next_dashboard from '../../public/projects/next-dashboard.png';
 import edmunds_scraping from '../../public/projects/edmunds-scraping.png';
 import iti from '../../public/projects/iti.jpg';
+import hirefy from '../../public/projects/hirefy.png';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
@@ -335,6 +336,76 @@ export const projects: Project[] = [
 ];
 
 export const works: Project[] = [
+  {
+    title: 'Incident Management',
+    slug: 'incident-management',
+    description:
+      'A web application to manage incidents and track their status, with real-time updates and user authentication with double dashboards (client / operator)',
+    image: null,
+    techStack: ['React js', 'Tailwind CSS', 'react-query', 'Socket.io'],
+    type: 'professional',
+    paid: true,
+    year: 2025,
+    tags: ['React js', 'Tailwind CSS', 'react-query', 'Socket.io'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
+    highlights: [
+      'real-time updates with Socket.io',
+      'user authentication',
+      'responsive design',
+      'double dashboards (client / operator)',
+    ],
+    whatILearned: [
+      'how to use react-query for data fetching and caching',
+      'how to use Socket.io for real-time updates',
+    ],
+  },
+  {
+    title: 'Scheduling AI App',
+    slug: 'scheduling-ai-app',
+    description:
+      'An app that uses AI to help users schedule their goals and objectives with a AI powered scheduling system',
+    image: null,
+    techStack: ['React js', 'Tailwind CSS', 'Axios'],
+    type: 'professional',
+    paid: true,
+    year: 2025,
+    tags: ['React js', 'Tailwind CSS', 'Axios'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
+    highlights: [
+      'AI-powered scheduling',
+      'responsive design',
+      'user authentication',
+      'calendar integration',
+    ],
+  },
+  {
+    title: 'Hirefy',
+    slug: 'hirefy',
+    description:
+      'A platform connecting job seekers with employers and CV builder tool',
+    image: hirefy,
+    techStack: ['React js', 'Tailwind CSS', 'hello-pangea/dnd'],
+    type: 'professional',
+    paid: true,
+    year: 2025,
+    tags: ['React js', 'Tailwind CSS', 'hello-pangea/dnd'],
+    category: ProjectCategory.FRONTEND,
+    status: 'in-progress',
+    whatILearned: [
+      'how to use hello-pangea/dnd for drag and drop functionality',
+      'how to build a CV builder tool',
+      'best practices for building a professional website',
+    ],
+    highlights: [
+      'drag and drop functionality for CV builder',
+      'responsive design',
+      'user authentication',
+      'CV generation',
+    ],
+    liveUrl: 'https://cv-builder-301634029579.europe-west1.run.app/',
+  },
   {
     title: 'Seven Design Studio',
     slug: 'seven-design-studio',

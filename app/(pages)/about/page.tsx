@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     title: 'Abdulrahman Moussa - About',
     description:
       'Learn more about Abdulrahman Moussa, a frontend developer specializing in React.js and JavaScript. Explore skills, education, certifications, and professional experience.',
-    url: 'https://3bdulrahmn.tech/about',
     siteName: 'Abdulrahman Moussa Portfolio',
     images: [
       {
@@ -66,7 +65,6 @@ export default function AboutPage() {
     name: 'Abdulrahman Moussa',
     jobTitle: 'Frontend Developer',
     skills: 'JavaScript, React.js, Next.js, Frontend Development',
-    url: 'https://3bdulrahmn.tech/about',
     sameAs: [
       'https://www.linkedin.com/in/3bdulrahmn69',
       'https://github.com/3bdulrahmn69',

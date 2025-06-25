@@ -38,13 +38,12 @@ export async function generateMetadata({
     openGraph: {
       title: `${project.title} | Project Details`,
       description: project.description,
-      url: `https://3bdulrahmn.tech/projects/${project.slug}`,
       images: [
         {
           url:
             typeof project.image === 'string'
               ? project.image
-              : project.image.src,
+              : project.image?.src || '/placeholder.jpg',
         },
       ],
     },
@@ -57,7 +56,7 @@ export async function generateMetadata({
           url:
             typeof project.image === 'string'
               ? project.image
-              : project.image.src,
+              : project.image?.src || '/placeholder.jpg',
         },
       ],
     },
@@ -126,7 +125,7 @@ export default async function ProjectDetails({
 
         <div className="relative h-96 rounded-xl overflow-hidden my-8 shadow-lg">
           <Image
-            src={project.image}
+            src={project.image || '/placeholder.jpg'}
             alt={project.title}
             fill
             className="object-cover transition-transform duration-300 hover:scale-105"

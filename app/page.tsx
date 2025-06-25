@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     title: 'Abdulrahman Moussa - Home',
     description:
       'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
-    url: 'https://3bdulrahmn.tech',
     siteName: 'Abdulrahman Moussa Portfolio',
     images: [
       {

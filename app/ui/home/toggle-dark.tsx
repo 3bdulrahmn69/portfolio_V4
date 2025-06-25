@@ -1,46 +1,34 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 const ToggleDark = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean | null>(null);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    const localTheme = localStorage.getItem('theme');
-
-    if (localTheme === 'dark' || !localTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      setIsDarkMode(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDarkMode(false);
-    }
+    setMounted(true);
   }, []);
 
-  const toggleTheme = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-
-    if (newMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
-  if (isDarkMode === null) return null;
+  if (!mounted) {
+    return (
+      <button
+        aria-label="Toggle Dark Mode"
+        className="opacity-0 pointer-events-none"
+      >
+        <div className="w-6 h-6" />
+      </button>
+    );
+  }
 
   return (
     <button
-      onClick={toggleTheme}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       aria-label="Toggle Dark Mode"
     >
-      {isDarkMode ? (
+      {theme === 'dark' ? (
         <FaMoon className="text-gray-500" size={24} />
       ) : (
         <FaSun className="text-yellow-500" size={24} />
