@@ -16,6 +16,8 @@ import next_dashboard from '../../public/projects/next-dashboard.png';
 import edmunds_scraping from '../../public/projects/edmunds-scraping.png';
 import iti from '../../public/projects/iti.jpg';
 import hirefy from '../../public/projects/hirefy.png';
+import incidentManagement from '../../public/projects/incident-management.png';
+import schedulingAI from '../../public/projects/scheduling-ai.png';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
@@ -341,7 +343,7 @@ export const works: Project[] = [
     slug: 'incident-management',
     description:
       'A web application to manage incidents and track their status, with real-time updates and user authentication with double dashboards (client / operator)',
-    image: null,
+    image: incidentManagement,
     techStack: ['React js', 'Tailwind CSS', 'react-query', 'Socket.io'],
     type: 'professional',
     paid: true,
@@ -365,7 +367,7 @@ export const works: Project[] = [
     slug: 'scheduling-ai-app',
     description:
       'An app that uses AI to help users schedule their goals and objectives with a AI powered scheduling system',
-    image: null,
+    image: schedulingAI,
     techStack: ['React js', 'Tailwind CSS', 'Axios'],
     type: 'professional',
     paid: true,
