@@ -469,23 +469,25 @@ export const education = [
     description:
       'Comprehensive 4-year program covering information systems, database design, software development, and IT management fundamentals.',
   },
-  {
-    title: 'ALX Africa Software Engineering Program',
-    provider: 'ALX Africa',
-    period: '2023 - 2024',
-    description:
-      'Rigorous 12-month program focused on hands-on software engineering, problem-solving, algorithms, low-level programming, and real-world project collaboration.',
-  },
+];
+
+export const courses = [
   {
     title: 'Frontend & Cross-Platform Development',
     provider: 'Information Technology Institute (ITI)',
     period: 'March 2025 - July 2025',
     description:
       'Intensive 4-month training in JavaScript, modern frontend frameworks, cross-platform development, UI/UX design, and performance optimization through real-world projects.',
+    status: 'In Progress',
   },
-];
-
-export const courses = [
+  {
+    title: 'ALX Africa Software Engineering Program',
+    provider: 'ALX Africa',
+    period: '2023 - 2024',
+    description:
+      'Rigorous 12-month program focused on hands-on software engineering, problem-solving, algorithms, low-level programming, and real-world project collaboration.',
+    status: 'Completed',
+  },
   {
     title: 'The Ultimate React Course 2024: React, Next.js',
     provider: 'Jonas Schmedtmann (Udemy)',
