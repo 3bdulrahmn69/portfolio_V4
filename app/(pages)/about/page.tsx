@@ -144,16 +144,22 @@ export default function AboutPage() {
                     Crafting Digital Experiences
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    I&apos;m Abdulrahman Moussa, a frontend developer focused on
-                    building immersive, user-first web interfaces. My skills
-                    were shaped through ALX, self-learning, and formal training
-                    at ITI in Front-End Cross Platform Development, where I
-                    worked on real-world projects using modern frameworks and
-                    best practices. I specialize in creating responsive,
-                    intuitive digital experiences that balance performance with
-                    visual appeal. Passionate about continuous growth, I&apos;m
-                    always exploring new tools to craft seamless and impactful
-                    user experiences.
+                    I&apos;m Abdulrahman Moussa, a frontend developer who loves
+                    creating responsive and user-friendly web interfaces. I
+                    started my journey through self-learning, building small
+                    projects and diving into HTML, CSS, and JavaScript on my
+                    own. That foundation led me to join the ALX Software
+                    Engineering program, where I improved my problem-solving
+                    skills and learned how to build real-world applications
+                    through consistent, independent learning. After that, I
+                    joined the Intensive Training Program (ITP) at the
+                    Information Technology Institute (ITI), specializing in
+                    frontend and cross-platform development. There, I worked on
+                    practical projects using modern tools like React and APIs.
+                    Learning has always been at the heart of what I do — before
+                    ALX and ITI, during them, and still every day. I&apos;m
+                    always exploring better ways to build fast, accessible, and
+                    modern web experiences.
                   </p>
                 </div>
 
