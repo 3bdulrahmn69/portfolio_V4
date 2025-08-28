@@ -18,6 +18,7 @@ import iti from '../../public/projects/iti.jpg';
 import hirefy from '../../public/projects/hirefy.png';
 import incidentManagement from '../../public/projects/incident-management.png';
 import schedulingAI from '../../public/projects/scheduling-ai.png';
+import flowtech from '../../public/projects/flowtech.png';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
@@ -382,6 +383,21 @@ export const projects: Project[] = [
 ];
 
 export const works: Project[] = [
+  {
+    title: 'Flowtech',
+    slug: 'flowtech',
+    description:
+      "FlowTech Arabia is a comprehensive React-based website developed for a leading Saudi Arabian manufacturer of industrial cleaning equipment. The project showcases the company's expertise in producing high-performance SuperSucker vacuum trucks and Hydro Jetting machines, serving key sectors including oil & gas, petrochemicals, and municipal services across the Middle East.",
+    image: flowtech,
+    techStack: ['React js', 'Tailwind CSS'],
+    type: 'professional',
+    paid: true,
+    year: 2025,
+    tags: ['React js', 'Tailwind CSS', 'Saudi Arabia'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
+    liveUrl: 'https://flowtech-arabia.netlify.app/',
+  },
   {
     title: 'Incident Management',
     slug: 'incident-management',
