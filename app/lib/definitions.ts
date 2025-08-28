@@ -24,6 +24,7 @@ export type Project = {
   githubUrl?: string;
   liveUrl?: string;
   paid?: boolean;
+  demoUrl?: string;
 };
 
 export type Certification = {

@@ -25,6 +25,50 @@ import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
   {
+    title: 'Herfa',
+    slug: 'herfa',
+    description:
+      'A platform to connect skilled and verified craftsmen with potential clients',
+    image:
+      'https://raw.githubusercontent.com/3bdulrahmn69/craftworks-gallery/refs/heads/main/public/home.png',
+    techStack: [
+      'Next.js',
+      'TypeScript',
+      'NextAuth',
+      'Tailwind CSS',
+      'Socket.io',
+    ],
+    type: 'personal',
+    year: 2025,
+    liveUrl: 'https://herfa-g.netlify.app/',
+    status: 'completed',
+    category: ProjectCategory.FULLSTACK,
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'NextAuth',
+      'Tailwind CSS',
+      'Socket.io',
+      'herfa',
+      'craftworks',
+      'client',
+    ],
+    whatILearned: [
+      'How to implement real-time features with Socket.io',
+      'Best practices for user authentication with NextAuth',
+      'More practice with Tailwind CSS',
+      'More experience with Next.js',
+    ],
+    highlights: [
+      'real-time chat between clients and craftsmen',
+      'user authentication and authorization',
+      'responsive design with Tailwind CSS',
+      'real-time updates with Socket.io',
+      'fully multi-language support (Arabic, English)',
+    ],
+    demoUrl: 'https://youtu.be/z3gZKqGWiPM',
+  },
+  {
     title: 'ITI Projects Collection',
     slug: 'iti-projects-collection',
     description:
@@ -49,7 +93,7 @@ export const projects: Project[] = [
     ],
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'projects', 'iti'],
     category: ProjectCategory.FRONTEND,
-    status: 'in-progress',
+    status: 'completed',
   },
   {
     title: 'Edmunds Scraping',
@@ -394,7 +438,7 @@ export const works: Project[] = [
     year: 2025,
     tags: ['React js', 'Tailwind CSS', 'hello-pangea/dnd'],
     category: ProjectCategory.FRONTEND,
-    status: 'in-progress',
+    status: 'completed',
     whatILearned: [
       'how to use hello-pangea/dnd for drag and drop functionality',
       'how to build a CV builder tool',
@@ -475,10 +519,10 @@ export const courses = [
   {
     title: 'Frontend & Cross-Platform Development',
     provider: 'Information Technology Institute (ITI)',
-    period: 'March 2025 - July 2025',
+    period: 'March 2025 - August 2025',
     description:
       'Intensive 4-month training in JavaScript, modern frontend frameworks, cross-platform development, UI/UX design, and performance optimization through real-world projects.',
-    status: 'In Progress',
+    status: 'Completed',
   },
   {
     title: 'ALX Africa Software Engineering Program',
