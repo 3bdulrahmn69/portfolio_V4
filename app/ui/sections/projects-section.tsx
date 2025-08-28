@@ -15,7 +15,7 @@ export default function Projects() {
       </Description>
       <Container className="max-w-6xl mx-auto px-4 mt-8">
         <div className="flex flex-col justify-center items-center md:items-stretch md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {works.map((work) => (
+          {works.slice(0, 4).map((work) => (
             <ProjectCard key={work.slug} {...work} />
           ))}
           {projects.slice(0, 5).map((project) => (
