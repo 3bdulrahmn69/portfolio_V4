@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import './ui/globals.css';
 import Footer from './ui/footer';
 import GoTop from './ui/go-top';
-import GoogleAnalytics from './ui/google-analytics';
 import { Providers } from './providers/theme-provider';
 
 const Analytics = dynamic(() =>
@@ -34,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <GoogleAnalytics />
         <meta name="theme-color" content="#ededed" />
       </head>
       <body
