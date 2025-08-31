@@ -1,7 +1,22 @@
+'use client';
+
 import Script from 'next/script';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const GoogleAnalytics = () => {
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    // Delay loading GA by 2 seconds to prioritize page content
+    const timer = setTimeout(() => {
+      setShouldLoad(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!shouldLoad) return null;
+
   return (
     <>
       <Script

@@ -1,12 +1,21 @@
 import type { Metadata } from 'next';
 import { Merriweather } from 'next/font/google';
+import dynamic from 'next/dynamic';
 import './ui/globals.css';
 import Footer from './ui/footer';
 import GoTop from './ui/go-top';
 import GoogleAnalytics from './ui/google-analytics';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Providers } from './providers/theme-provider';
+
+const Analytics = dynamic(() =>
+  import('@vercel/analytics/next').then((mod) => ({ default: mod.Analytics }))
+);
+
+const SpeedInsights = dynamic(() =>
+  import('@vercel/speed-insights/next').then((mod) => ({
+    default: mod.SpeedInsights,
+  }))
+);
 
 const slabo_13px = Merriweather({ subsets: ['latin'], weight: '400' });
 

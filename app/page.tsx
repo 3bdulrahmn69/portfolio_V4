@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Hero from './ui/sections/hero-section';
-import About from './ui/sections/about-section';
-import Contact from './ui/sections/contact-section';
+
+const About = dynamic(() => import('./ui/sections/about-section'), {
+  loading: () => <div>Loading about...</div>,
+});
 
 const Projects = dynamic(() => import('./ui/sections/projects-section'), {
   loading: () => <div>Loading projects...</div>,
+});
+
+const Contact = dynamic(() => import('./ui/sections/contact-section'), {
+  loading: () => <div>Loading contact...</div>,
 });
 
 export const metadata: Metadata = {
