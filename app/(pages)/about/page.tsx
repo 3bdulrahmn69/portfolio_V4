@@ -96,11 +96,11 @@ export default function AboutPage() {
                     height={300}
                     quality={100}
                     priority
-                    src="/my.png"
+                    src="/my.webp"
                     alt="Abdulrahman Moussa"
                     className="relative rounded-2xl border-4 border-secondary-background-light dark:border-secondary-background-dark w-full h-auto z-[2]"
                   />
-                  <BgImage></BgImage>
+                  <BgImage />
                 </div>
 
                 <div className="space-y-2 p-4 bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl">

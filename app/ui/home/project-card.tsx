@@ -18,7 +18,11 @@ const ProjectCard = ({
   const maxTechStackLength = 4;
 
   return (
-    <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-secondary-background-light dark:bg-secondary-background-dark shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.03] transform-gpu">
+    <article
+      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl bg-secondary-background-light dark:bg-secondary-background-dark shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.03] transform-gpu"
+      role="article"
+      aria-labelledby={`project-title-${slug}`}
+    >
       {/* Enhanced glow effect with animation - Behind everything */}
       <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-700 bg-gradient-to-r from-primary-light/8 via-primary-dark/6 to-primary-light/8 rounded-xl blur-md scale-125 animate-pulse z-0" />
 
@@ -56,7 +60,10 @@ const ProjectCard = ({
 
         {/* Project Title */}
         <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 via-black/10 to-transparent z-20">
-          <h3 className="text-xl font-bold text-white drop-shadow-2xl transition-all duration-300 group-hover:transform group-hover:translate-y-[-3px] group-hover:scale-105 group-hover:text-shadow-lg">
+          <h3
+            id={`project-title-${slug}`}
+            className="text-xl font-bold text-white drop-shadow-2xl transition-all duration-300 group-hover:transform group-hover:translate-y-[-3px] group-hover:scale-105 group-hover:text-shadow-lg"
+          >
             {title}
           </h3>
         </div>
@@ -92,24 +99,31 @@ const ProjectCard = ({
         </div>
 
         {/* Links Container */}
-        <div className="mt-6 flex items-center justify-between">
-          <div className="flex gap-3">
+        <div
+          className="mt-6 flex items-center justify-between"
+          role="group"
+          aria-label="Project actions"
+        >
+          <div className="flex gap-3" role="group" aria-label="External links">
             {/* GitHub Link */}
             {githubUrl ? (
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl p-3 hover:bg-background-light dark:hover:bg-background-dark transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-light/25 dark:hover:shadow-primary-dark/25 will-change-transform group/link hover:-rotate-3 active:scale-95"
-                aria-label="GitHub repository"
+                className="rounded-xl p-3 hover:bg-background-light dark:hover:bg-background-dark transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-light/25 dark:hover:shadow-primary-dark/25 will-change-transform group/link hover:-rotate-3 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
+                aria-label={`View ${title} source code on GitHub`}
               >
                 <FiGithub className="h-5 w-5 text-primary-light dark:text-primary-dark transition-all duration-300 group-hover/link:text-primary-600 dark:group-hover/link:text-primary-400 group-hover/link:scale-110 group-hover/link:rotate-6" />
               </a>
             ) : (
               <div
                 className="rounded-xl p-3 bg-gray-100 dark:bg-gray-800 opacity-50 cursor-not-allowed"
-                aria-label="GitHub repository not available"
+                aria-label={`Source code for ${title} is not available`}
                 title="Source code not available"
+                role="button"
+                aria-disabled="true"
+                tabIndex={-1}
               >
                 <FiGithub className="h-5 w-5 text-gray-400 dark:text-gray-600" />
               </div>
@@ -121,16 +135,19 @@ const ProjectCard = ({
                 href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-xl p-3 hover:bg-background-light dark:hover:bg-background-dark transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-light/25 dark:hover:shadow-primary-dark/25 will-change-transform group/link hover:rotate-3 active:scale-95"
-                aria-label="Live demo"
+                className="rounded-xl p-3 hover:bg-background-light dark:hover:bg-background-dark transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary-light/25 dark:hover:shadow-primary-dark/25 will-change-transform group/link hover:rotate-3 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
+                aria-label={`View live demo of ${title}`}
               >
                 <FiExternalLink className="h-5 w-5 text-primary-light dark:text-primary-dark transition-all duration-300 group-hover/link:text-primary-600 dark:group-hover/link:text-primary-400 group-hover/link:scale-110 group-hover/link:-rotate-6" />
               </a>
             ) : (
               <div
                 className="rounded-xl p-3 bg-gray-100 dark:bg-gray-800 opacity-50 cursor-not-allowed"
-                aria-label="Live demo not available"
+                aria-label={`Live demo for ${title} is not available`}
                 title="Live demo not available"
+                role="button"
+                aria-disabled="true"
+                tabIndex={-1}
               >
                 <FiExternalLink className="h-5 w-5 text-gray-400 dark:text-gray-600" />
               </div>
@@ -141,13 +158,13 @@ const ProjectCard = ({
             ariaLabel={`View more details about ${title} project`}
             href={`/projects/${slug}`}
             variant="tertiary"
-            className="w-fit px-4 py-2"
+            className="w-fit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
           >
             Details
           </Button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

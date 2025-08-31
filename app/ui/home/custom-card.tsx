@@ -7,7 +7,7 @@ export default function CustomCard() {
     <div className="bg-primary-light dark:bg-primary-dark rounded-lg transition-colors duration-300 animate-FadeInRev">
       <figure className="relative">
         <Image
-          src="/my.png"
+          src="/my.webp"
           width={500}
           height={500}
           alt="Abdulrahman Moussa Picture"
