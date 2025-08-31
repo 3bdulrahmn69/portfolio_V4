@@ -5,10 +5,10 @@ const GoogleAnalytics = () => {
   return (
     <>
       <Script
-        async
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-RPG1ZXC120`}
-      ></Script>
-      <Script id="google-analytics">
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}

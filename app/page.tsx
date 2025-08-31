@@ -1,8 +1,12 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Hero from './ui/sections/hero-section';
 import About from './ui/sections/about-section';
-import Projects from './ui/sections/projects-section';
 import Contact from './ui/sections/contact-section';
+
+const Projects = dynamic(() => import('./ui/sections/projects-section'), {
+  loading: () => <div>Loading projects...</div>,
+});
 
 export const metadata: Metadata = {
   title: 'Abdulrahman Moussa - Home',
