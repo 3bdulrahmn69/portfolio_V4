@@ -8,12 +8,43 @@ export enum ProjectCategory {
   SCRAPING = 'Web Scraping',
 }
 
+export enum Technology {
+  HTML = 'HTML',
+  CSS = 'CSS',
+  JAVASCRIPT = 'JavaScript',
+  BOOTSTRAP = 'Bootstrap',
+  REACT = 'React.js',
+  NEXTJS = 'Next.js',
+  TYPESCRIPT = 'TypeScript',
+  NEXTAUTH = 'NextAuth',
+  TAILWINDCSS = 'Tailwind CSS',
+  SOCKETIO = 'Socket.io',
+  SASS = 'Sass',
+  PUPPETEER = 'Puppeteer',
+  REACTDND = 'React DnD',
+  KONVAJS = 'Konva.js',
+  LOCALSTORAGE = 'Local Storage',
+  RAPIDAPI = 'Rapid API',
+  AXIOS = 'Axios',
+  LEAFLET = 'Leaflet',
+  GEOLOCATION = 'Geolocation',
+  JSONSERVER = 'JSON-SERVER',
+  DAISYUI = 'DaisyUI',
+  OMDBAPI = 'OMDb API',
+  FRAMERMOTION = 'Framer Motion',
+  I18NEXT = 'I18next',
+  MATERIALUI = 'Material UI',
+  GSAP = 'GSAP',
+  REACTQUERY = 'React Query',
+  HELLOPANGEADND = 'Hello Pangea DnD',
+}
+
 export type Project = {
   title: string;
   slug: string;
   description: string;
   image: StaticImageData | string | null;
-  techStack: string[];
+  techStack: Technology[];
   type: 'personal' | 'professional';
   year: number;
   tags: string[];
