@@ -369,6 +369,34 @@ export default async function ProjectDetails({
             )}
           </aside>
         </div>
+
+        {/* Explore More Projects Card */}
+        <section className="mt-12">
+          <div className="bg-gradient-to-r from-primary-light/10 to-primary-light/5 dark:from-primary-dark/10 dark:to-primary-dark/5 rounded-2xl p-6 border border-primary-light/20 dark:border-primary-dark/20 shadow-lg">
+            <div className="text-center space-y-4">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-light/20 dark:bg-primary-dark/20 rounded-full mb-3">
+                <FiCode className="w-6 h-6 text-primary-light dark:text-primary-dark" />
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
+                  Explore More Projects
+                </h2>
+                <p className="text-base text-gray-600 dark:text-gray-300 max-w-lg mx-auto leading-relaxed">
+                  Check out my other projects and see what else I&apos;ve built.
+                </p>
+              </div>
+              <div className="pt-3">
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary-light to-primary-light/80 dark:from-primary-dark dark:to-primary-dark/80 hover:from-primary-light/90 hover:to-primary-light/70 dark:hover:from-primary-dark/90 dark:hover:to-primary-dark/70 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-medium gap-2 group text-white"
+                >
+                  <span>View All Projects</span>
+                  <FiExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </Container>
     </main>
   );
