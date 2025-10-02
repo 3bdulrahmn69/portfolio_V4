@@ -24,12 +24,56 @@ import hirefy from '../../public/projects/hirefy.webp';
 import incidentManagement from '../../public/projects/incident-management.webp';
 import schedulingAI from '../../public/projects/scheduling-ai.webp';
 import flowtech from '../../public/projects/flowtech.webp';
+import FineLife from '../../public/projects/fine-life.webp';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
 import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
+  {
+    title: 'Fine Life',
+    slug: 'fine-life',
+    description:
+      'A comprehensive personal finance management application that provides smart expense tracking, intelligent budget management, automated transaction processing, and multi-currency support to help you build wealth systematically.',
+    image: FineLife,
+    techStack: [
+      Technology.NEXTJS,
+      Technology.TYPESCRIPT,
+      Technology.NEXTAUTH,
+      Technology.TAILWINDCSS,
+    ],
+    type: 'personal',
+    year: 2025,
+    liveUrl: 'https://fine-life.vercel.app/',
+    status: 'completed',
+    category: ProjectCategory.FULLSTACK,
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'NextAuth',
+      'Tailwind CSS',
+      'fine-life',
+      'personal finance',
+      'wealth management',
+    ],
+    whatILearned: [
+      'How to implement Cron jobs for automated tasks',
+      'Best practices for user authentication with NextAuth',
+      'More practice with Tailwind CSS',
+      'More experience with Next.js',
+    ],
+    highlights: [
+      '3 Theme Modes (Light, Dark, Life) with system preference detection',
+      'Automated transaction processing with Cron jobs',
+      'Multi-currency support with real-time exchange rates',
+      'Intelligent budget management with overspending alerts',
+      'Smart expense tracking with category suggestions',
+      'User authentication and authorization with NextAuth supporting Google login',
+      'Responsive design with Tailwind CSS',
+      'Import and export data functionality to CSV and Excel',
+    ],
+  },
   {
     title: 'Herfa',
     slug: 'herfa',
