@@ -37,6 +37,11 @@ export enum Technology {
   GSAP = 'GSAP',
   REACTQUERY = 'React Query',
   HELLOPANGEADND = 'Hello Pangea DnD',
+  EXPRESSJS = 'Express.js',
+  NODEJS = 'Node.js',
+  MONGODB = 'MongoDB',
+  RECHARTS = 'Recharts',
+  VERCELCRONS = 'Vercel Cron',
 }
 
 export type Project = {
