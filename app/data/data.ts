@@ -91,6 +91,7 @@ export const projects: Project[] = [
       Technology.NEXTAUTH,
       Technology.TAILWINDCSS,
       Technology.SOCKETIO,
+      Technology.NEXTINTL,
     ],
     type: 'personal',
     year: 2025,

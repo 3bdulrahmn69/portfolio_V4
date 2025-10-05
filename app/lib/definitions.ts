@@ -42,6 +42,7 @@ export enum Technology {
   MONGODB = 'MongoDB',
   RECHARTS = 'Recharts',
   VERCELCRONS = 'Vercel Cron',
+  NEXTINTL = 'Next-Intl',
 }
 
 export type Project = {
