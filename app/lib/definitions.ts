@@ -43,6 +43,7 @@ export enum Technology {
   RECHARTS = 'Recharts',
   VERCELCRONS = 'Vercel Cron',
   NEXTINTL = 'Next-Intl',
+  GEMINI = 'Gemini',
 }
 
 export type Project = {

@@ -46,6 +46,7 @@ export const projects: Project[] = [
       Technology.MONGODB,
       Technology.NODEJS,
       Technology.VERCELCRONS,
+      Technology.GEMINI,
     ],
     type: 'personal',
     year: 2025,
@@ -66,6 +67,7 @@ export const projects: Project[] = [
       'Best practices for user authentication with NextAuth',
       'More practice with Tailwind CSS',
       'More experience with Next.js',
+      'Integrating Gemini API for AI-powered features',
     ],
     highlights: [
       '3 Theme Modes (Light, Dark, Life) with system preference detection',
@@ -76,6 +78,7 @@ export const projects: Project[] = [
       'User authentication and authorization with NextAuth supporting Google login',
       'Responsive design with Tailwind CSS',
       'Import and export data functionality to CSV and Excel',
+      'AI-powered insights using Gemini API',
     ],
   },
   {
