@@ -25,6 +25,7 @@ import incidentManagement from '../../public/projects/incident-management.webp';
 import schedulingAI from '../../public/projects/scheduling-ai.webp';
 import flowtech from '../../public/projects/flowtech.webp';
 import FineLife from '../../public/projects/fine-life.webp';
+import solarmasr from '../../public/projects/solar-masr.webp';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
@@ -476,6 +477,21 @@ export const projects: Project[] = [
 ];
 
 export const works: Project[] = [
+  {
+    title: 'Solar Masr',
+    slug: 'solar-masr',
+    description:
+      'A web portfolio for Solar Masr Egyptian company showcasing their services and products',
+    image: solarmasr,
+    techStack: [Technology.NEXTJS, Technology.TAILWINDCSS],
+    type: 'professional',
+    paid: true,
+    year: 2025,
+    tags: ['Next.js', 'Tailwind CSS', 'Egypt'],
+    category: ProjectCategory.FRONTEND,
+    status: 'completed',
+    liveUrl: 'https://solar-masr.vercel.app',
+  },
   {
     title: 'FlowTech',
     slug: 'flowtech',
