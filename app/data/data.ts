@@ -26,12 +26,63 @@ import schedulingAI from '../../public/projects/scheduling-ai.webp';
 import flowtech from '../../public/projects/flowtech.webp';
 import FineLife from '../../public/projects/fine-life.webp';
 import solarmasr from '../../public/projects/solar-masr.webp';
+import trackVerse from '../../public/projects/track-verse.webp';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
 import founder from '@/public/certifications/founder-academy.png';
 
 export const projects: Project[] = [
+  {
+    title: 'Track Verse',
+    slug: 'track-verse',
+    description:
+      'Track and organize your favorite movies, TV shows, books, and video games all in one place. Discover new content, share reviews, and connect with friends.',
+    image: trackVerse,
+    techStack: [
+      Technology.NEXTJS,
+      Technology.TYPESCRIPT,
+      Technology.NEXTAUTH,
+      Technology.TAILWINDCSS,
+      Technology.POSTGRESQL,
+      Technology.DRIZZLEORM,
+      Technology.NODEJS,
+      Technology.ZUSTAND,
+    ],
+    type: 'personal',
+    year: 2025,
+    liveUrl: 'https://track-verse.vercel.app/',
+    githubUrl: 'https://github.com/3bdulrahmn69/track-verse',
+    status: 'completed',
+    category: ProjectCategory.FULLSTACK,
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'NextAuth',
+      'Tailwind CSS',
+      'PostgreSQL',
+      'Drizzle ORM',
+      'Node.js',
+      'track-verse',
+      'movies',
+      'tv shows',
+      'books',
+      'video games',
+    ],
+    whatILearned: [
+      'How to use Drizzle ORM with PostgreSQL',
+      'Best practices for state management with Zustand',
+      'More practice with Tailwind CSS',
+      'More experience with Next.js',
+    ],
+    highlights: [
+      'Work with 3rd party APIs to fetch movie, TV show, book, and video game data',
+      'Public and private profiles for users to showcase their collections and reviews',
+      'Social features including friends, following, and activity feeds',
+      'Advanced search and filtering options to discover new content',
+      'Responsive design for mobile users',
+    ],
+  },
   {
     title: 'Fine Life',
     slug: 'fine-life',
@@ -52,6 +103,7 @@ export const projects: Project[] = [
     type: 'personal',
     year: 2025,
     liveUrl: 'https://fine-life.vercel.app/',
+    githubUrl: 'https://github.com/3bdulrahmn69/fine-life',
     status: 'completed',
     category: ProjectCategory.FULLSTACK,
     tags: [

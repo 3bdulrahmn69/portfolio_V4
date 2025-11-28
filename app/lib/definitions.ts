@@ -44,6 +44,9 @@ export enum Technology {
   VERCELCRONS = 'Vercel Cron',
   NEXTINTL = 'Next-Intl',
   GEMINI = 'Gemini',
+  DRIZZLEORM = 'Drizzle ORM',
+  POSTGRESQL = 'PostgreSQL',
+  ZUSTAND = 'Zustand',
 }
 
 export type Project = {
