@@ -6,14 +6,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
+        port: '',
+        pathname: '/**',
       },
     ],
-  },
-  experimental: {
-    optimizePackageImports: ['@vercel/analytics', '@vercel/speed-insights'],
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
   },
 };
 

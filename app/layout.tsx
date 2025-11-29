@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { Merriweather } from 'next/font/google';
 import dynamic from 'next/dynamic';
-import './ui/globals.css';
-import Footer from './ui/footer';
-import GoTop from './ui/go-top';
-import { Providers } from './providers/theme-provider';
+import { ThemeProvider } from 'next-themes';
+import Header from '@/components/layout/header';
+import Footer from '../components/layout/footer';
+import GoTop from '../components/shared/go-top';
+import './globals.css';
 
 const Analytics = dynamic(() =>
   import('@vercel/analytics/next').then((mod) => ({ default: mod.Analytics }))
@@ -36,13 +37,20 @@ export default function RootLayout({
         <meta name="theme-color" content="#ededed" />
       </head>
       <body
-        className={`${slabo_13px.className} relative bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased`}
+        className={`${slabo_13px.className} relative bg-background text-foreground transition-colors duration-300 antialiased`}
       >
-        <Providers>
+        <ThemeProvider
+          attribute="class"
+          themes={['light', 'dark', 'system']}
+          enableSystem={true}
+          defaultTheme="system"
+          storageKey="abdulrahman-moussa-portfolio-theme"
+        >
+          <Header />
           {children}
           <GoTop />
           <Footer />
-        </Providers>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
