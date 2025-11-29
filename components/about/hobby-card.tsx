@@ -25,12 +25,8 @@ const HobbyCard = ({
     >
       {emoji}
     </div>
-    <h3 className="text-lg font-semibold mb-2 text-foreground">
-      {title}
-    </h3>
-    <p className="text-muted-foreground text-sm leading-relaxed">
-      {children}
-    </p>
+    <h3 className="text-lg font-semibold mb-2 text-foreground">{title}</h3>
+    <p className="text-muted-foreground text-sm leading-relaxed">{children}</p>
   </div>
 );
 

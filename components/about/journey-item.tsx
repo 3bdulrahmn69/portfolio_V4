@@ -38,9 +38,7 @@ const JourneyItem = ({
           </span>
         )}
       </div>
-      <p className="text-sm text-muted-foreground italic">
-        {period}
-      </p>
+      <p className="text-sm text-muted-foreground italic">{period}</p>
       <p className="text-muted-foreground">{description}</p>
     </div>
   </div>
