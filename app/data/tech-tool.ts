@@ -25,12 +25,14 @@ import {
   SiVitest,
   SiDaisyui,
   SiI18Next,
+  SiRedux,
 } from 'react-icons/si';
 import { DiMysql, DiJqueryLogo, DiGit, DiResponsive } from 'react-icons/di';
 import { TbBrandTailwind, TbBrandGithubCopilot } from 'react-icons/tb';
 import { BiLogoFlask } from 'react-icons/bi';
 import { PiFramerLogoFill } from 'react-icons/pi';
 import { VscVscode } from 'react-icons/vsc';
+import { GiMatterStates } from 'react-icons/gi';
 
 export const techStack = [
   { name: 'HTML', icon: FaHtml5 },
@@ -46,6 +48,8 @@ export const techStack = [
   { name: 'Express Js', icon: SiExpress },
   { name: 'Next Js', icon: SiNextdotjs },
   { name: 'Python', icon: FaPython },
+  { name: 'Redux', icon: SiRedux },
+  { name: 'Zustand', icon: GiMatterStates },
   { name: 'Flask', icon: BiLogoFlask },
   { name: 'MySQL', icon: DiMysql },
   { name: 'MongoDB', icon: SiMongodb },

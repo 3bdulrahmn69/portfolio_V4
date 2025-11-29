@@ -152,6 +152,7 @@ export const projects: Project[] = [
     type: 'personal',
     year: 2025,
     liveUrl: 'https://herfa-g.netlify.app/',
+    githubUrl: 'https://github.com/3bdulrahmn69/craftworks-frontend',
     status: 'completed',
     category: ProjectCategory.FULLSTACK,
     tags: [
