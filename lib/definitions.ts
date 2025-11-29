@@ -72,6 +72,6 @@ export type Certification = {
   title: string;
   issuer: string;
   image: StaticImageData | string;
-  credentialUrl: string;
+  credentialUrl?: string;
   issueDate: string;
 };

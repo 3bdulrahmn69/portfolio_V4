@@ -22,15 +22,17 @@ const Certificate = ({
         <h4 className="text-lg font-semibold">{title}</h4>
         <p className="text-muted-foreground">{issuer}</p>
         <p className="text-muted-foreground">{issueDate}</p>
-        <Button
-          type="anchor"
-          variant="tertiary"
-          href={credentialUrl}
-          ariaLabel={`View ${title} certificate`}
-          className="text-primary"
-        >
-          View Certificate
-        </Button>
+        {credentialUrl && (
+          <Button
+            type="anchor"
+            variant="tertiary"
+            href={credentialUrl}
+            ariaLabel={`View ${title} certificate`}
+            className="text-primary"
+          >
+            View Certificate
+          </Button>
+        )}
       </div>
     </div>
   );

@@ -31,6 +31,7 @@ import trackVerse from '@/public/projects/track-verse.webp';
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
 import founder from '@/public/certifications/founder-academy.png';
+import itiCert from '@/public/certifications/iti.jpg';
 
 export const projects: Project[] = [
   {
@@ -716,6 +717,12 @@ export const works: Project[] = [
 ];
 
 export const certifications: Certification[] = [
+  {
+    title: 'Intensive Training in Frontend & Cross-Platform Development',
+    issuer: 'Information Technology Institute (ITI)',
+    image: itiCert,
+    issueDate: '2025-08-30',
+  },
   {
     title: 'Software Engineering',
     issuer: 'ALX Africa',
