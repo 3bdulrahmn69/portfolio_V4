@@ -151,7 +151,7 @@ export default async function ProjectDetails({
         </header>
 
         {/* Project Image Banner */}
-        <section className="relative -mx-4 mb-12 lg:mb-16">
+        <section className="relative mb-12 lg:mb-16">
           <div className="relative h-[300px] md:h-[400px] lg:h-[500px] xl:h-[550px] overflow-hidden shadow-xl bg-secondary rounded-xl">
             <Image
               src={project.image}

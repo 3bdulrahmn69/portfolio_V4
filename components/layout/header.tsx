@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import ToggleDark from '../home/toggle-dark';
+import ToggleTheme from '../shared/toggle-theme';
 import Breadcrumb from '../ui/bread-crumb';
 import Logo from '../shared/logo';
 import { cn } from '../../lib/utils';
@@ -24,7 +24,7 @@ const Header = ({ className }: { className?: string }) => {
         <Logo />
       )}
       <div>
-        <ToggleDark />
+        <ToggleTheme />
       </div>
     </header>
   );

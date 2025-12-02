@@ -20,6 +20,7 @@ const SpeedInsights = dynamic(() =>
 const slabo_13px = Merriweather({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://3bdulrahmn.vercel.app'),
   title: {
     template: 'Abdulrahman Moussa - %s',
     default: 'Abdulrahman Moussa portfolio',
@@ -32,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#ededed" />
       </head>

@@ -118,7 +118,7 @@ export default function AboutPage() {
                     📄
                     <span className="font-medium">
                       <a
-                        href="https://flowcv.com/resume/emcfrihgf1"
+                        href="https://drive.google.com/file/d/1EmonRfmPGvfNVJn0EWkLmyKEdmkLDCWn/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline"

@@ -18,7 +18,7 @@ const HeroText = () => {
       </Button>
       <Button
         ariaLabel="resume"
-        href="https://flowcv.com/resume/emcfrihgf1"
+        href="https://drive.google.com/file/d/1EmonRfmPGvfNVJn0EWkLmyKEdmkLDCWn/view?usp=sharing"
         className="mt-4 px-8 bg-transparent text-foreground border-2 border-foreground"
       >
         Resume
