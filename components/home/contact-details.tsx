@@ -21,10 +21,10 @@ const ContactDetails = () => {
           <div>
             <p className="text-sm font-medium text-muted-foreground">Email</p>
             <a
-              href="mailto:abdulrahmanmoussa69@gmail.com"
+              href="mailto:abdulrahman.moussa.dev@gmail.com"
               className="text-base md:text-lg break-all font-semibold hover:text-primary transition-colors"
             >
-              abdulrahmanmoussa69@gmail.com
+              abdulrahman.moussa.dev@gmail.com
             </a>
           </div>
         </div>

@@ -422,6 +422,7 @@ export const projects: Project[] = [
     type: 'personal',
     year: 2024,
     githubUrl: 'https://github.com/3bdulrahmn69/mercyBridge',
+    demoUrl: 'https://youtu.be/pU1WjRFPtJQ',
     highlights: [
       'Multi-language support (Arabic and English)',
       'Advanced search and filtering system',
