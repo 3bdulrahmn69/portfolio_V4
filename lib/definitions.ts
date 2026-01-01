@@ -22,6 +22,7 @@ export enum Technology {
   SASS = 'Sass',
   PUPPETEER = 'Puppeteer',
   REACTDND = 'React DnD',
+  DnDkit = 'DnD Kit',
   KONVAJS = 'Konva.js',
   LOCALSTORAGE = 'Local Storage',
   RAPIDAPI = 'Rapid API',
@@ -35,7 +36,7 @@ export enum Technology {
   I18NEXT = 'I18next',
   MATERIALUI = 'Material UI',
   GSAP = 'GSAP',
-  REACTQUERY = 'React Query',
+  TANSTACKQUERY = 'TanStack Query',
   HELLOPANGEADND = 'Hello Pangea DnD',
   EXPRESSJS = 'Express.js',
   NODEJS = 'Node.js',
@@ -47,6 +48,7 @@ export enum Technology {
   DRIZZLEORM = 'Drizzle ORM',
   POSTGRESQL = 'PostgreSQL',
   ZUSTAND = 'Zustand',
+  BETTERAUTH = 'BetterAuth',
 }
 
 export type Project = {

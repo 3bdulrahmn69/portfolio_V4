@@ -27,6 +27,7 @@ import flowtech from '@/public/projects/flowtech.webp';
 import FineLife from '@/public/projects/fine-life.webp';
 import solarmasr from '@/public/projects/solar-masr.webp';
 import trackVerse from '@/public/projects/track-verse.webp';
+import monoForm from '@/public/projects/mono-form.webp';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
@@ -543,6 +544,64 @@ export const projects: Project[] = [
 
 export const works: Project[] = [
   {
+    title: 'Mono Form',
+    slug: 'mono-form',
+    description:
+      'modern SaaS form builder that allows users to create custom forms, share them via link or embed, collect responses, and view submissions in a dashboard.',
+    image: monoForm,
+    techStack: [
+      Technology.NEXTJS,
+      Technology.TAILWINDCSS,
+      Technology.DnDkit,
+      Technology.TANSTACKQUERY,
+      Technology.BETTERAUTH,
+      Technology.MONGODB,
+      Technology.RECHARTS,
+      Technology.ZUSTAND,
+    ],
+    type: 'professional',
+    paid: true,
+    year: 2026,
+    tags: [
+      'Next.js',
+      'Tailwind CSS',
+      'DnDkit',
+      'Zustand',
+      'form builder',
+      'Recharts',
+      'BetterAuth',
+      'MongoDB',
+      'TanStack Query',
+      'SaaS',
+      'forms',
+      'data visualization',
+      'collect responses',
+    ],
+    category: ProjectCategory.FULLSTACK,
+    status: 'in-progress',
+    liveUrl: 'https://mono-form.vercel.app',
+    highlights: [
+      'SaaS form builder with custom form creation',
+      'Share forms via link or embed code',
+      'Collect and view responses in a dashboard',
+      'Drag-and-drop form builder using DnDkit',
+      'Data visualization with Recharts',
+      'Responsive design for all devices',
+      'User authentication and session management with BetterAuth',
+      'Advanced analytics and reporting features',
+    ],
+    whatILearned: [
+      'Building SaaS applications with Next.js',
+      'Implementing drag-and-drop functionality with DnDkit',
+      'Advanced state management with Zustand',
+      'Creating interactive data visualizations with Recharts',
+      'Best practices for user authentication with BetterAuth',
+      'More familiar with building responsive user interfaces with Tailwind CSS',
+      'Working with MongoDB for data storage',
+      'Optimizing data fetching and caching with TanStack Query',
+    ],
+  },
+  {
     title: 'Solar Masr',
     slug: 'solar-masr',
     description:
@@ -605,7 +664,7 @@ export const works: Project[] = [
     techStack: [
       Technology.REACT,
       Technology.TAILWINDCSS,
-      Technology.REACTQUERY,
+      Technology.TANSTACKQUERY,
       Technology.SOCKETIO,
     ],
     type: 'professional',
