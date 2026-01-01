@@ -89,7 +89,7 @@ export const projects: Project[] = [
     title: 'Fine Life',
     slug: 'fine-life',
     description:
-      'A comprehensive personal finance management application that provides smart expense tracking, intelligent budget management, automated transaction processing, and multi-currency support to help you build wealth systematically.',
+      'Comprehensive personal finance management application that provides smart expense tracking, intelligent budget management, automated transaction processing, and multi-currency support to help you build wealth systematically.',
     image: FineLife,
     techStack: [
       Technology.NEXTJS,
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     title: 'Herfa',
     slug: 'herfa',
     description:
-      'A platform to connect skilled and verified craftsmen with potential clients',
+      'Platform to connect skilled and verified craftsmen with potential clients',
     image:
       'https://raw.githubusercontent.com/3bdulrahmn69/craftworks-gallery/refs/heads/main/public/home.png',
     techStack: [
@@ -547,7 +547,7 @@ export const works: Project[] = [
     title: 'Mono Form',
     slug: 'mono-form',
     description:
-      'modern SaaS form builder that allows users to create custom forms, share them via link or embed, collect responses, and view submissions in a dashboard.',
+      'Modern SaaS form builder that allows users to create custom forms, share them via link or embed, collect responses, and view submissions in a dashboard.',
     image: monoForm,
     techStack: [
       Technology.NEXTJS,
@@ -605,7 +605,7 @@ export const works: Project[] = [
     title: 'Solar Masr',
     slug: 'solar-masr',
     description:
-      'A web portfolio for Solar Masr Egyptian company showcasing their services and products',
+      'Web portfolio for Solar Masr Egyptian company showcasing their services and products',
     image: solarmasr,
     techStack: [Technology.NEXTJS, Technology.TAILWINDCSS],
     type: 'professional',
@@ -708,7 +708,7 @@ export const works: Project[] = [
     title: 'Hirefy',
     slug: 'hirefy',
     description:
-      'A platform connecting job seekers with employers and CV builder tool',
+      'Platform connecting job seekers with employers and CV builder tool',
     image: hirefy,
     techStack: [
       Technology.REACT,
@@ -738,7 +738,7 @@ export const works: Project[] = [
     title: 'Seven Design Studio',
     slug: 'seven-design-studio',
     description:
-      'A portfolio website for Seven Design Studio to showcase their work and services',
+      'Portfolio website for Seven Design Studio to showcase their work and services',
     image:
       'https://raw.githubusercontent.com/drme990/7DStudio---Updated-Jan---2025/refs/heads/main/public/thumbnail.png',
     techStack: [
