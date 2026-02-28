@@ -49,7 +49,15 @@ export enum Technology {
   POSTGRESQL = 'PostgreSQL',
   ZUSTAND = 'Zustand',
   BETTERAUTH = 'BetterAuth',
+  REACTQILL = 'React Quill',
 }
+
+export type ProjectPart = {
+  label: string;
+  description?: string;
+  liveUrl?: string;
+  githubUrl?: string;
+};
 
 export type Project = {
   title: string;
@@ -68,6 +76,8 @@ export type Project = {
   liveUrl?: string;
   paid?: boolean;
   demoUrl?: string;
+  gallery?: (StaticImageData | string)[];
+  parts?: ProjectPart[];
 };
 
 export type Certification = {

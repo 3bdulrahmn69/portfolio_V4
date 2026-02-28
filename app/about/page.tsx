@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'About',
   description:
     'Learn more about Abdulrahman Moussa, a frontend developer specializing in React.js and JavaScript. Explore skills, education, certifications, and professional experience.',
+  alternates: {
+    canonical: '/about',
+  },
   keywords: [
     'About Abdulrahman Moussa',
     'Abdulrahman Moussa bio',

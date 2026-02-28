@@ -10,20 +10,25 @@ const Projects = dynamic(
   () => import('../components/sections/projects-section'),
   {
     loading: () => <div>Loading projects...</div>,
-  }
+  },
 );
 
 const Contact = dynamic(
   () => import('../components/sections/contact-section'),
   {
     loading: () => <div>Loading contact...</div>,
-  }
+  },
 );
 
 export const metadata: Metadata = {
-  title: 'Abdulrahman Moussa - Home',
+  title: {
+    absolute: 'Abdulrahman Moussa - Frontend Developer | Portfolio',
+  },
   description:
     'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     'Abdulrahman Moussa',
     'frontend developer',
@@ -61,7 +66,7 @@ export const metadata: Metadata = {
     'خبرة عبدالرحمن موسى',
   ],
   openGraph: {
-    title: 'Abdulrahman Moussa - Home',
+    title: 'Abdulrahman Moussa - Frontend Developer | Portfolio',
     description:
       'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
     siteName: 'Abdulrahman Moussa Portfolio',
@@ -76,7 +81,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    title: 'Abdulrahman Moussa - Home',
+    title: 'Abdulrahman Moussa - Frontend Developer | Portfolio',
     card: 'summary_large_image',
     description:
       'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
@@ -87,12 +92,50 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        name: 'Abdulrahman Moussa Portfolio',
+        url: 'https://3bdulrahmn.vercel.app',
+        description:
+          'Abdulrahman Moussa is a frontend developer specializing in React.js and JavaScript. Explore his projects, works, and development experience.',
+        inLanguage: 'en-US',
+      },
+      {
+        '@type': 'Person',
+        name: 'Abdulrahman Moussa',
+        url: 'https://3bdulrahmn.vercel.app',
+        jobTitle: 'Frontend Developer',
+        knowsAbout: [
+          'JavaScript',
+          'React.js',
+          'Next.js',
+          'TypeScript',
+          'Frontend Development',
+          'Web Development',
+        ],
+        sameAs: [
+          'https://www.linkedin.com/in/3bdulrahmn69',
+          'https://github.com/3bdulrahmn69',
+          'https://medium.com/@3bdulrahmn69',
+          'https://twitter.com/3bdulrahmn69',
+        ],
+      },
+    ],
+  };
+
   return (
-    <>
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <Projects />
       <About />
       <Contact />
-    </>
+    </main>
   );
 }

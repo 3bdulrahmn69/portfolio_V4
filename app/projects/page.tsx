@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Container from '@/components/layout/container';
-import ProjectCard from '@/components/home/project-card';
+import ProjectCard from '@/components/projects/project-card';
 import { Description, Section, Title } from '@/components/ui/section';
 import { projects, works } from '@/data/data';
 import Button from '@/components/ui/button';
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: 'Projects',
   description:
     'Explore Abdulrahman Moussa’s projects, works, and development experience.',
+  alternates: {
+    canonical: '/projects',
+  },
   keywords: [
     'Abdulrahman Moussa projects',
     'frontend developer',
@@ -73,7 +76,7 @@ export default function ProjectsPage() {
 
   // Get completion statistics
   const completedProjects = [...projects, ...works].filter(
-    (item) => item.status === 'completed'
+    (item) => item.status === 'completed',
   ).length;
   const completionRate = Math.round((completedProjects / totalItems) * 100);
 

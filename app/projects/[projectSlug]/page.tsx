@@ -6,6 +6,7 @@ import { works, projects } from '@/data/data';
 import { Project } from '@/lib/definitions';
 import Container from '@/components/layout/container';
 import VideoDemo from '@/components/ui/video-demo';
+import ProjectGallery from '@/components/projects/project-gallery';
 
 import {
   FiGithub,
@@ -15,10 +16,17 @@ import {
   FiCalendar,
   FiCode,
   FiLayers,
+  FiGrid,
 } from 'react-icons/fi';
 import { BiSolidCategory } from 'react-icons/bi';
 import { AiFillAlert } from 'react-icons/ai';
 import { HiOutlineSparkles } from 'react-icons/hi2';
+
+export async function generateStaticParams() {
+  return [...works, ...projects].map((project) => ({
+    projectSlug: project.slug,
+  }));
+}
 
 export async function generateMetadata({
   params,
@@ -36,34 +44,28 @@ export async function generateMetadata({
     };
   }
 
+  const imageUrl =
+    typeof project.image === 'string' ? project.image : project.image.src;
+
   return {
     title: `${project.title} | Project Details`,
     description: project.description,
     keywords: project.tags?.join(', '),
+    alternates: {
+      canonical: `/projects/${project.slug}`,
+    },
     openGraph: {
       title: `${project.title} | Project Details`,
       description: project.description,
-      images: [
-        {
-          url:
-            typeof project.image === 'string'
-              ? project.image
-              : project.image.src,
-        },
-      ],
+      type: 'article',
+      url: `/projects/${project.slug}`,
+      images: [{ url: imageUrl, alt: project.title }],
     },
     twitter: {
       title: `${project.title} | Project Details`,
       card: 'summary_large_image',
       description: project.description,
-      images: [
-        {
-          url:
-            typeof project.image === 'string'
-              ? project.image
-              : project.image.src,
-        },
-      ],
+      images: [{ url: imageUrl, alt: project.title }],
     },
   };
 }
@@ -86,8 +88,42 @@ export default async function ProjectDetails({
     return notFound();
   }
 
+  // JSON-LD structured data for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareSourceCode',
+    name: project.title,
+    description: project.description,
+    image:
+      typeof project.image === 'string' ? project.image : project.image.src,
+    dateCreated: project.year ? `${project.year}-01-01` : undefined,
+    programmingLanguage: project.techStack.join(', '),
+    ...(project.githubUrl && { codeRepository: project.githubUrl }),
+    ...(project.liveUrl && { url: project.liveUrl }),
+    ...(project.parts &&
+      project.parts.length > 0 && {
+        hasPart: project.parts.map((part) => ({
+          '@type': 'SoftwareApplication',
+          name: part.label,
+          ...(part.description && { description: part.description }),
+          ...(part.liveUrl && { url: part.liveUrl }),
+          ...(part.githubUrl && { codeRepository: part.githubUrl }),
+        })),
+      }),
+    author: {
+      '@type': 'Person',
+      name: 'Abdulrahman Moussa',
+      url: 'https://3bdulrahmn.vercel.app',
+    },
+    keywords: project.tags?.join(', '),
+  };
+
   return (
     <main className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Container className="py-16 lg:py-20">
         {/* Header */}
         <header className="mb-12 lg:mb-16">
@@ -152,7 +188,7 @@ export default async function ProjectDetails({
 
         {/* Project Image Banner */}
         <section className="relative mb-12 lg:mb-16">
-          <div className="relative h-[300px] md:h-[400px] lg:h-[500px] xl:h-[550px] overflow-hidden shadow-xl bg-secondary rounded-xl">
+          <div className="relative h-75 md:h-100 lg:h-125 xl:h-137.5 overflow-hidden shadow-xl bg-secondary rounded-xl">
             <Image
               src={project.image}
               alt={project.title}
@@ -165,31 +201,89 @@ export default async function ProjectDetails({
           </div>
         </section>
 
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4 mb-12">
-          {project.githubUrl && (
-            <Link
-              href={project.githubUrl}
-              className="inline-flex items-center justify-center px-6 py-3.5 bg-foreground hover:bg-accent rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 font-medium gap-3 group text-background"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiGithub className="w-5 h-5 transition-transform group-hover:scale-110" />
-              <span>View Repository</span>
-            </Link>
-          )}
-          {project.liveUrl && (
-            <Link
-              href={project.liveUrl}
-              className="inline-flex items-center justify-center px-6 py-3.5 bg-primary hover:bg-accent rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 font-medium gap-3 group text-primary-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiExternalLink className="w-5 h-5 transition-transform group-hover:scale-110" />
-              <span>Live Preview</span>
-            </Link>
-          )}
-        </div>
+        {/* Action Buttons / Project Parts */}
+        {project.parts && project.parts.length > 0 ? (
+          <section className="mb-12">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <FiGrid className="w-5 h-5 text-primary" />
+              </div>
+              <h2 className="text-xl lg:text-2xl font-bold text-foreground">
+                Project Parts
+              </h2>
+              <span className="ml-auto text-sm text-muted-foreground font-medium bg-secondary px-3 py-1 rounded-full">
+                {project.parts.length}{' '}
+                {project.parts.length === 1 ? 'part' : 'parts'}
+              </span>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {project.parts.map((part) => (
+                <div
+                  key={part.label}
+                  className="group bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md hover:border-primary/40 hover:-translate-y-1 transition-all duration-300"
+                >
+                  <h3 className="text-base font-bold text-card-foreground mb-1.5 group-hover:text-primary transition-colors duration-200">
+                    {part.label}
+                  </h3>
+                  {part.description && (
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      {part.description}
+                    </p>
+                  )}
+                  <div className="flex flex-wrap gap-2.5 mt-auto">
+                    {part.githubUrl && (
+                      <Link
+                        href={part.githubUrl}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-foreground hover:bg-accent text-background rounded-lg text-sm font-medium shadow-sm hover:shadow-md transition-all duration-200 group/link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FiGithub className="w-4 h-4 transition-transform group-hover/link:scale-110" />
+                        <span>Repository</span>
+                      </Link>
+                    )}
+                    {part.liveUrl && (
+                      <Link
+                        href={part.liveUrl}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-primary hover:bg-accent text-primary-foreground rounded-lg text-sm font-medium shadow-sm hover:shadow-md transition-all duration-200 group/link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FiExternalLink className="w-4 h-4 transition-transform group-hover/link:scale-110" />
+                        <span>Live Preview</span>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : (
+          <div className="flex flex-wrap gap-4 mb-12">
+            {project.githubUrl && (
+              <Link
+                href={project.githubUrl}
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-foreground hover:bg-accent rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 font-medium gap-3 group text-background"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiGithub className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>View Repository</span>
+              </Link>
+            )}
+            {project.liveUrl && (
+              <Link
+                href={project.liveUrl}
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-primary hover:bg-accent rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 font-medium gap-3 group text-primary-foreground"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiExternalLink className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>Live Preview</span>
+              </Link>
+            )}
+          </div>
+        )}
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10">
@@ -204,6 +298,11 @@ export default async function ProjectDetails({
                   className="w-full"
                 />
               </section>
+            )}
+
+            {/* Project Gallery */}
+            {project.gallery && project.gallery.length > 0 && (
+              <ProjectGallery images={project.gallery} title={project.title} />
             )}
 
             {/* Key Features */}
@@ -316,8 +415,8 @@ export default async function ProjectDetails({
                       project.status === 'completed'
                         ? 'text-success'
                         : project.status === 'in-progress'
-                        ? 'text-warning'
-                        : 'text-destructive'
+                          ? 'text-warning'
+                          : 'text-destructive'
                     }`}
                   >
                     {project.status.replace('-', ' ')}

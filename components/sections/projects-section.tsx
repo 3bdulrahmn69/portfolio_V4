@@ -1,6 +1,6 @@
 import Container from '../layout/container';
 import { Section, Title, Description } from '../ui/section';
-import ProjectCard from '../home/project-card';
+import ProjectCard from '../projects/project-card';
 import { projects, works } from '../../data/data';
 import Button from '../ui/button';
 import { FiArrowRight } from 'react-icons/fi';

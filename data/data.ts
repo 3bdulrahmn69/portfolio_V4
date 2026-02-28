@@ -28,6 +28,10 @@ import FineLife from '@/public/projects/fine-life.webp';
 import solarmasr from '@/public/projects/solar-masr.webp';
 import trackVerse from '@/public/projects/track-verse.webp';
 import monoForm from '@/public/projects/mono-form.webp';
+import manasik from '@/public/projects/manasik.webp';
+import ghadaq from '@/public/projects/ghadaq.webp';
+import manasik_admin_login from '@/public/projects/manasik_admin_login.webp';
+import manasik_admin_panel from '@/public/projects/manasik_admin_panel.webp';
 
 import softWare from '@/public/certifications/short-specializations.png';
 import aice from '@/public/certifications/aice.png';
@@ -600,6 +604,95 @@ export const works: Project[] = [
       'Working with MongoDB for data storage',
       'Optimizing data fetching and caching with TanStack Query',
     ],
+  },
+  {
+    title: 'Manasik & Ghadaq',
+    slug: 'manasik-ghadaq',
+    description:
+      'A full-stack suite of three interconnected Next.js 16 applications — the Manasik Foundation website, the Ghadaq Association website, and a shared admin panel — all backed by a single MongoDB database. Both public platforms provide bilingual (Arabic/English) Islamic religious and charitable services including Aqiqah, sacrifices, vows, charity, and well-drilling. The admin panel manages products, orders, coupons, users, referrals, appearance, and payment settings for both foundations independently, with JWT-based role authentication and a complete activity audit log.',
+    image: manasik,
+    techStack: [
+      Technology.NEXTJS,
+      Technology.TYPESCRIPT,
+      Technology.TAILWINDCSS,
+      Technology.NEXTINTL,
+      Technology.REACTQILL,
+      Technology.MONGODB,
+      Technology.NODEJS,
+    ],
+    type: 'professional',
+    paid: true,
+    year: 2026,
+    tags: [
+      'Next.js 16',
+      'TypeScript',
+      'Tailwind CSS',
+      'Next-Intl',
+      'React Quill',
+      'MongoDB',
+      'Mongoose',
+      'Cloudinary',
+      'Paymob',
+      'JWT',
+      'multi-tenant',
+      'bilingual',
+      'RTL',
+      'PWA',
+      'multi-currency',
+      'Aqiqah',
+      'Hajj',
+      'Umrah',
+      'Islamic',
+      'admin dashboard',
+    ],
+    category: ProjectCategory.FULLSTACK,
+    status: 'completed',
+    highlights: [
+      'Bilingual Arabic (RTL) and English (LTR) across all three apps via next-intl',
+      'Product catalog for Islamic services with multi-currency pricing and real-time exchange rates',
+      'Full checkout flow with country-based pricing, coupon validation, and referral tracking',
+      'Two configurable payment gateways per project — Paymob and EasyKash — switchable from the admin panel',
+      'Interactive Aqiqah calculator for estimating ceremony costs',
+      'Works gallery with two-row image sliders managed via Cloudinary from the admin panel',
+      'Shared admin dashboard with JWT authentication and two roles: super_admin and admin',
+      'Per-page permission control — super_admin can restrict which pages each admin user can access',
+      'Full CRUD for products (with rich text, multi-image upload, multi-currency pricing, drag-to-reorder), orders, coupons, countries, users, and referrals',
+      'Per-project appearance and payment settings managed independently for Manasik and Ghadaq',
+      'Complete activity audit log tracking all admin create, update, delete, login, and logout events',
+      'Five built-in admin themes (Light, Black, Manasik, Ghadaq, Colors) all adapting via CSS custom properties',
+      'SEO-ready with dynamic sitemap.xml, robots.txt, and Open Graph meta tags on both public sites',
+      'PWA support with site.webmanifest for installable experience on mobile',
+    ],
+    whatILearned: [
+      'Designing a multi-tenant architecture where three independent apps share one MongoDB database',
+      'Building a secure JWT authentication system from scratch with role-based access and per-page permissions',
+      'Integrating two payment gateways (Paymob and EasyKash) with runtime switching via admin settings',
+      'Implementing real-time multi-currency pricing with country-based routing and exchange rate APIs',
+      'Managing Cloudinary image uploads at scale with drag-to-reorder and per-project gallery control',
+      'Building a full admin audit trail (activity log) for all create, update, and delete actions',
+      'Best practices for bilingual next-intl apps with full RTL/LTR layout switching',
+      'Creating and managing rich text content with react-quill-new in a Next.js App Router environment',
+    ],
+    parts: [
+      {
+        label: 'Manasik Website',
+        description:
+          'Public-facing bilingual Next.js 16 app for Manasik Foundation. Features a product catalog, Aqiqah calculator, full checkout with multi-currency support, Paymob/EasyKash payments, referral system, works gallery, and PWA support. Custom green gradient branding with Arabic RTL.',
+        liveUrl: 'https://manasik.net',
+      },
+      {
+        label: 'Ghadaq Website',
+        description:
+          'Public-facing bilingual Next.js 16 app for Ghadaq Association. Identical feature set to Manasik with its own gold/green brand colors, independent payment settings, and separate appearance management. Shares the same MongoDB database.',
+        liveUrl: 'https://ghadaq.net',
+      },
+      {
+        label: 'Admin Dashboard',
+        description:
+          'Centralized back-office panel managing both foundations. Includes JWT auth with super_admin/admin roles, per-page permissions, full CRUD for products/orders/coupons/countries/users/referrals, Cloudinary image management, per-project payment and appearance settings, and a complete activity audit log. Supports 5 themes and Arabic/English UI.',
+      },
+    ],
+    gallery: [manasik, ghadaq, manasik_admin_login, manasik_admin_panel],
   },
   {
     title: 'Solar Masr',
