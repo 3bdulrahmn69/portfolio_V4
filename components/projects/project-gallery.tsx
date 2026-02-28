@@ -92,7 +92,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
       {/* Lightbox Modal */}
       {isOpen && lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/85 backdrop-blur-md animate-slide-up"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-overlay/85 backdrop-blur-md animate-slide-up"
           onClick={(e) => {
             if (e.target === e.currentTarget) closeLightbox();
           }}

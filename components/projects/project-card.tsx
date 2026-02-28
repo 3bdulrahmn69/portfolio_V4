@@ -67,10 +67,10 @@ const ProjectCard = ({
         </div>
 
         {/* Project Title */}
-        <div className="absolute -bottom-2 left-0 right-0 p-4 bg-linear-to-t from-black/50 via-black/10 to-transparent z-20">
+        <div className="absolute -bottom-2 left-0 right-0 p-4 bg-linear-to-t from-overlay/50 via-overlay/10 to-transparent z-20">
           <h3
             id={`project-title-${slug}`}
-            className="text-xl font-bold text-white drop-shadow-2xl transition-all duration-300 group-hover:transform group-hover:-translate-y-0.75 group-hover:scale-105 group-hover:text-shadow-lg"
+            className="text-xl font-bold text-overlay-foreground drop-shadow-2xl transition-all duration-300 group-hover:transform group-hover:-translate-y-0.75 group-hover:scale-105 group-hover:text-shadow-lg"
           >
             {title}
           </h3>
